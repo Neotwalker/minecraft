@@ -89,16 +89,46 @@ $(function() {
 		$("#dlemasscomments #comments").focus().val(text + smile);
 	});
 
-	const opened_sort = document.querySelectorAll('ul.sort')[0];
-	const sort = document.getElementById("sort--news__mobile");
-	sort.addEventListener("click", function (e) {
-		opened_sort.classList.toggle("open");
-		e.stopPropagation();
-	});
-	window.addEventListener('click', function(e) {
-	  if (opened_sort.classList.contains("open")){
-	    opened_sort.classList.remove('open');
-	  }
-	});
+	if (document.querySelector('.goto-files') && document.querySelector('.download-area')) {
+		function elementInViewport(el){
+			let bounds = el.getBoundingClientRect();
+			return (
+					(bounds.top + bounds.height > 0) && // Елемент ниже верхней границы
+					(window.innerHeight - bounds.top > 0) && // Выше нижней
+					(bounds.left + bounds.width > 0) && // Правее левой
+					(window.innerWidth - bounds.left > 0)// Левее правой
+			);
+		}
+		document.addEventListener("scroll", (e) => {
+				let el = document.querySelector("#thisElement");
+				let inViewport = elementInViewport(el);
+				if (inViewport){
+					$('.goto-files').removeClass('show')
+				} else {
+					$('.goto-files').addClass('show');
+				}
+		})
+	
+		$('.goto-files-button button').click(function () {
+			$('html, body').animate({
+				scrollTop: $(".download-area").offset().top - 100,
+				scrollLeft: 0
+			}, 1000)
+		})
+	}
+
+	if (document.querySelector('ul.sort') && document.getElementById("sort--news__mobile") ) {
+		const opened_sort = document.querySelectorAll('ul.sort')[0];
+		const sort = document.getElementById("sort--news__mobile");
+		sort.addEventListener("click", function (e) {
+			opened_sort.classList.toggle("open");
+			e.stopPropagation();
+		});
+		window.addEventListener('click', function(e) {
+			if (opened_sort.classList.contains("open")){
+				opened_sort.classList.remove('open');
+			}
+		});
+	}
 
 });

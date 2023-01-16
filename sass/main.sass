@@ -176,7 +176,7 @@ a, input
 	&--wrapper
 		display: flex
 		flex-direction: column
-		height: 100%
+		min-height: 100%
 		.content
 			flex: 1 0 auto
 			margin-top: 30px
@@ -586,12 +586,16 @@ a, input
 
 .arrow-bottom
 	display: block
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.8333 1.49998L7.70703 6.62621C7.3165 7.01673 6.68334 7.01673 6.29281 6.62621L1.16659 1.49998' stroke='%23292929' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+	background-image: url('data:image/svg+xml,\
+	<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">\
+	<path d="M15.8333 7.49998L10.707 12.6262C10.3165 13.0167 9.68334 13.0167 9.29281 12.6262L4.16659 7.49998" stroke="#292929" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>\
+	</svg>\
+	')
 	background-repeat: no-repeat
 	background-size: contain
 	filter: invert(0)
-	height: 12px
-	width: 12px
+	height: 16px
+	width: 16px
 
 .footer
 	background: $white
@@ -966,6 +970,49 @@ a, input
 					display: inline-block
 					margin-bottom: 0
 					margin-left: auto
+	.goto-files
+		position: fixed
+		width: 100%
+		box-sizing: border-box
+		left: 0
+		right: 0
+		margin: 0 auto
+		bottom: 0
+		z-index: 9
+		transform: translateY(100%)
+		transition: transform .2s
+		max-width: 370px
+		&-icon
+			margin-top: 2px
+		&.show
+			transform: translate(0,0)
+			bottom: 30px
+		&-button
+			width: 100%
+			box-sizing: border-box
+			background: #fff
+			box-shadow: 0 0 6px rgba(0, 0, 0, 26%)
+			padding: 10px 14px
+			border-radius: 10px
+			button
+				font-weight: bold
+				text-transform: uppercase
+				background-color: #E7F3FF
+				color: #1a8df8
+				width: 100%
+				border-radius: 10px
+				cursor: pointer
+				font-size: 14px
+				padding: 13px 0
+				border: 0
+				img
+					margin: 0
+
+.flex.middle.center
+	justify-content: center
+	display: flex
+	align-items: center
+	gap: 10px
 
 .arrows
 	min-width: 58px
@@ -1296,7 +1343,7 @@ label
 			display: block
 			position: absolute
 			content: ""
-			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 5L4 8L11 1' stroke='%23292929' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+			background-image: url("data:image/svg+xmlcharset=UTF-8,%3csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 5L4 8L11 1' stroke='%23292929' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
 			background-repeat: no-repeat
 			background-size: 13px
 			height: 20px
