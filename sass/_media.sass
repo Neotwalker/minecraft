@@ -189,7 +189,10 @@
 					.image
 						img
 							width: 307px
-
+		&.servers 
+			.blog--posts
+				.server
+					flex: 100%
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -267,6 +270,10 @@
 						img
 							width: 240px
 							height: 100%
+		&.servers 
+			.blog--posts
+				flex-direction: row
+				gap: 20px
 	.footer
 		&--wrapper
 			flex-wrap: wrap
@@ -325,9 +332,22 @@
 							display: block
 					.texts
 						padding: 0 20px 10px
+		&.servers 
+			.blog--posts
+				.server 
+					.texts
+						.h2
+							font-size: 20px
+							padding-bottom: 10px
+							margin-bottom: 10px
+						.list 
+							li
+								padding-bottom: 10px
+								margin-bottom: 10px
+								p, span
+									font-size: 16px
 	.single
-		.blog
-			&--posts 
+		.blog--posts 
 			.shortstory
 				&--image
 					margin-bottom: 20px
@@ -352,7 +372,7 @@
 	.button
 		&.download
 			font-size: 18px
-			margin: 15px 0
+			margin: 20px 0
 			display: flex
 			align-items: center
 			justify-content: center
@@ -465,6 +485,38 @@
 			padding: 0 20px
 			&-button
 				width: 100%
+	.servers
+		&--inner 
+			.main--info 
+				.shortstory
+					&--image 
+						.mainstory 
+							padding: 10px 10px 20px
+							.image img
+								margin-bottom: 0
+							.h1
+								font-size: 20px
+							.list 
+								li
+									margin-bottom: 20px
+									span
+										max-width: 160px
+									p, div
+										max-width: 130px
+									*
+										font-size: 16px !important
+									.copy
+										#myInput1
+											max-width: 120px
+										#myInput2
+											max-width: 55px
+					&--base 
+						.info, .text
+							font-size: 18px
+						.h2
+							font-size: 20px
+						ul li
+							font-size: 18px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 380px)
@@ -535,12 +587,44 @@
 						.title
 							.h2
 								font-size: 18px
+	.servers
+		&--inner 
+			.main--info 
+				.shortstory
+					&--image 
+						.mainstory
+							.list 
+								li
+									span
+										max-width: 145px
+									p, div
+										max-width: 130px
+									*
+										font-size: 16px !important
+									.copy
+										#myInput1
+											max-width: 120px
+										#myInput2
+											max-width: 55px
 
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px)
-	/**/
+.servers
+		&--inner 
+			.main--info 
+				.shortstory
+					&--image 
+						.mainstory
+							.list 
+								li
+									gap: 10px
+									span
+										max-width: 140px
+									p, div
+										max-width: 120px
+
 
 
 /* Extra Small Devices, Phones */

@@ -117,9 +117,9 @@ $(function() {
 		})
 	}
 
-	if (document.querySelector('ul.sort') && document.getElementById("sort--news__mobile") ) {
+	if (document.querySelector('ul.sort') && document.getElementById("sort--news") ) {
 		const opened_sort = document.querySelectorAll('ul.sort')[0];
-		const sort = document.getElementById("sort--news__mobile");
+		const sort = document.getElementById("sort--news");
 		sort.addEventListener("click", function (e) {
 			opened_sort.classList.toggle("open");
 			e.stopPropagation();
@@ -131,4 +131,17 @@ $(function() {
 		});
 	}
 
+	if (document.querySelector('ul.sort') && document.getElementById("news-sort") ) {
+		const opened_sort = document.querySelectorAll('ul.sort')[0];
+		const sort = document.getElementById("news-sort");
+		sort.addEventListener("click", function (e) {
+			opened_sort.classList.toggle("open");
+			e.stopPropagation();
+		});
+		window.addEventListener('click', function(e) {
+			if (opened_sort.classList.contains("open")){
+				opened_sort.classList.remove('open');
+			}
+		});
+	}
 });

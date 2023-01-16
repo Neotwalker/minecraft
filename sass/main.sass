@@ -114,8 +114,13 @@ a, input
 		padding-left: 20px
 		padding-right: 20px
 
-.border-radius
-	border-radius: 10px
+.border
+	&-radius
+		border-radius: 10px
+	&-top
+		padding-top: 20px
+		margin-top: 20px
+		border-top: 1px solid #DEDEDE
 
 .blocks
 	&--wrapper
@@ -287,8 +292,16 @@ a, input
 	&--description
 		font-size: 20px
 		line-height: 1.3
+		&.servers
+			display: flex
+			flex-direction: column
+			gap: 10px
 
 .blog
+	.speedbar
+		margin-bottom: 35px
+		a
+			color: #337ab7
 	&--sidebar
 		max-width: calc(25% - 30px)
 		width: 100%
@@ -431,6 +444,213 @@ a, input
 					&:hover
 						a
 							opacity: 1
+	&.servers
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 30px
+		.speedbar
+			margin-bottom: 0
+		.blog
+			&--posts
+				display: flex
+				flex-direction: inherit
+				gap: 30px
+				flex-wrap: wrap
+				.button.download
+					margin: 0
+				.breadcrumbs
+					flex: 1 1 100%
+					padding: 20px
+					width: 100%
+					display: flex
+					justify-content: space-between
+					background-color: $white
+					border-radius: 10px
+				.server
+					background-color: $white
+					padding: 15px
+					border-radius: 10px
+					flex: 1 1 calc(50% - 30px)
+					width: 100%
+					.image
+						margin-bottom: 15px
+						img
+							width: 100%
+					.texts
+						.h2
+							padding-bottom: 15px
+							margin-bottom: 15px
+							font-size: 32px
+							border-bottom: 1px solid #DEDEDE
+						.list
+							li
+								display: flex
+								align-items: center
+								border-bottom: 1px solid #DEDEDE
+								padding-bottom: 15px
+								margin-bottom: 20px
+								gap: 25px
+								span
+									display: inline-flex
+									align-items: center
+									gap: 7px
+									min-width: 70px
+									&::before
+										width: 24px
+										height: 24px
+										background-repeat: no-repeat
+										background-position: center
+								span, p
+									font-weight: bold
+									font-size: 20px
+									line-height: 1
+								&:first-child
+									span
+										&:before
+											content: ''
+											display: inline-block
+											background-image: url('data:image/svg+xml,\
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\
+												<path d="M2 12H22M2 12C2 17.5228 6.47715 22 12 22M2 12C2 6.47715 6.47715 2 12 2M22 12C22 17.5228 17.5228 22 12 22M22 12C22 6.47715 17.5228 2 12 2M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22M12 2C9.49872 4.73835 8.07725 8.29203 8 12C8.07725 15.708 9.49872 19.2616 12 22" stroke="#B5B5B5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>\
+												</svg>\
+												')
+								&:nth-child(2)
+									p
+										background-color: $accent
+										padding: 7px 10px
+										border-radius: 5px
+										color: $white
+									span
+										&:before
+											content: ''
+											display: inline-block
+											background-image: url('data:image/svg+xml,\
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\
+											<path d="M17.8 10C18.9201 10 19.4802 10 19.908 9.78201C20.2843 9.59027 20.5903 9.28431 20.782 8.90798C21 8.48016 21 7.92011 21 6.8V6.2C21 5.0799 21 4.51984 20.782 4.09202C20.5903 3.7157 20.2843 3.40973 19.908 3.21799C19.4802 3 18.9201 3 17.8 3L6.2 3C5.0799 3 4.51984 3 4.09202 3.21799C3.71569 3.40973 3.40973 3.71569 3.21799 4.09202C3 4.51984 3 5.07989 3 6.2L3 6.8C3 7.9201 3 8.48016 3.21799 8.90798C3.40973 9.28431 3.71569 9.59027 4.09202 9.78201C4.51984 10 5.07989 10 6.2 10L17.8 10Z" stroke="#B5B5B5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>\
+											<path d="M17.8 21C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V17.2C21 16.0799 21 15.5198 20.782 15.092C20.5903 14.7157 20.2843 14.4097 19.908 14.218C19.4802 14 18.9201 14 17.8 14L6.2 14C5.0799 14 4.51984 14 4.09202 14.218C3.71569 14.4097 3.40973 14.7157 3.21799 15.092C3 15.5198 3 16.0799 3 17.2L3 17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21H17.8Z" stroke="#B5B5B5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>\
+											</svg>\
+												')
+								&:last-child
+									border-bottom: none
+									margin-bottom: 0
+									padding-bottom: 0
+									span
+										&:before
+											content: ''
+											display: inline-block
+											background-image: url('data:image/svg+xml,\
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\
+											<path d="M13 5.99997L6.50182 7.29961C6.13883 7.37221 5.95733 7.40851 5.80952 7.49677C5.67886 7.57481 5.56772 7.68164 5.4846 7.80913C5.39057 7.95334 5.34714 8.13326 5.26028 8.49311L2 22M2 22L15.5069 18.7397C15.8667 18.6528 16.0466 18.6094 16.1908 18.5154C16.3183 18.4322 16.4252 18.3211 16.5032 18.1904C16.5915 18.0426 16.6278 17.8611 16.7004 17.4981L18 11M2 22L9.586 14.414M20.8686 7.8686L16.1314 3.13134C15.7354 2.73532 15.5373 2.53732 15.309 2.46313C15.1082 2.39787 14.8918 2.39787 14.691 2.46313C14.4627 2.53732 14.2646 2.73533 13.8686 3.13134L13.1314 3.8686C12.7354 4.26462 12.5373 4.46263 12.4632 4.69095C12.3979 4.8918 12.3979 5.10814 12.4632 5.30899C12.5373 5.53732 12.7354 5.73532 13.1314 6.13134L17.8686 10.8686C18.2646 11.2646 18.4627 11.4626 18.691 11.5368C18.8918 11.6021 19.1082 11.6021 19.309 11.5368C19.5373 11.4626 19.7354 11.2646 20.1314 10.8686L20.8686 10.1313C21.2646 9.73532 21.4627 9.53732 21.5368 9.30899C21.6021 9.10814 21.6021 8.8918 21.5368 8.69095C21.4627 8.46263 21.2646 8.26462 20.8686 7.8686ZM11 11C12.1046 11 13 11.8954 13 13C13 14.1045 12.1046 15 11 15C9.89543 15 9 14.1045 9 13C9 11.8954 9.89543 11 11 11Z" stroke="#B5B5B5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>\
+											</svg>\
+												')
+									p
+										background-color: #F0AD4E
+										padding: 7px 10px
+										border-radius: 5px
+										color: $white
+
+.servers
+	&--inner
+		.main--info
+			.shortstory
+				&--image
+					.mainstory
+						border-radius: 10px
+						background-color: $white
+						padding: 20px
+						display: flex
+						gap: 15px
+						flex-direction: column
+						.h1
+							padding-bottom: 15px
+							font-size: 32px
+							border-bottom: 1px solid #DEDEDE
+						.list
+							li
+								display: flex
+								align-items: center
+								font-size: 20px
+								padding-bottom: 10px
+								margin-bottom: 25px
+								border-bottom: 1px solid #DEDEDE
+								line-height: 1.1
+								&:last-child
+									border-bottom: none
+									padding-bottom: 0
+									margin-bottom: 0
+								.slots, .version
+									padding: 7px 10px
+									border-radius: 10px
+									color: $white
+								.slots
+									background-color: $accent
+								.version
+									background-color: #F0AD4E
+								ul
+									li
+										margin-bottom: 0
+										padding-bottom: 0
+										border-bottom: none
+								p
+									font-weight: normal
+									a
+										font-weight: normal
+										color: #337AB7
+									img
+										margin-bottom: 0
+								span
+									font-size: 18px
+									max-width: 190px
+									width: 100%
+									font-weight: bold
+								.copy
+									margin-bottom: 0
+									align-items: center
+									button
+										background-image: url('data:image/svg+xml;charset=utf-8,\
+										<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">\
+											<path d="M6.33398 8.83332C6.33398 7.17646 7.67713 5.83331 9.33398 5.83331H15.0006C16.6575 5.83331 18.0007 7.17646 18.0007 8.83331V14.5C18.0007 16.1568 16.6575 17.5 15.0007 17.5H9.33399C7.67713 17.5 6.33398 16.1568 6.33398 14.5V8.83332Z" stroke="#292929" stroke-linecap="round" stroke-linejoin="round"/>\
+											<path d="M14.666 2.50002L5.99935 2.50002C4.3425 2.50002 2.99935 3.84317 2.99935 5.50002L2.99935 14.1667" stroke="#292929" stroke-linecap="round" stroke-linejoin="round"/>\
+											</svg>')
+									#myInput, #myInput1, #myInput2
+										max-width: 155px
+										color: #292929
+										font-weight: bold
+								&:nth-child(2)
+									.copy
+										#myInput2
+											max-width: 70px
+								&:nth-child(3)
+									p
+										font-weight: bold
+				&--base
+					.info
+						border-bottom: 1px solid #DEDEDE
+						padding-bottom: 20px
+						margin-bottom: 20px
+					ul
+						li
+							color: #292929
+					img
+						margin-bottom: 20px
+					.scroll
+						display: flex
+						overflow-x: auto
+						gap: 10px
+						scrollbar-width: thin
+						scrollbar-color: #B5B5B5 transparent
+						img
+							max-width: 368px
+							max-height: 197px
+							height: 100%
+
+.servers--inner .main--info .shortstory--base .scroll::-webkit-scrollbar
+	width: 14px
+.servers--inner .main--info .shortstory--base .scroll::-webkit-scrollbar-track
+	background: transparent
+.servers--inner .main--info .shortstory--base .scroll::-webkit-scrollbar-thumb
+	background-color: #B5B5B5
+	border-radius: 10px
 
 .unit-rating
 	z-index: 0
@@ -451,6 +671,7 @@ a, input
 			border: 0 !important
 			text-indent: -9000px
 			z-index: 17
+			top: 0
 			position: absolute
 			padding: 0
 			&.r1-unit
@@ -677,10 +898,6 @@ a, input
 					padding: 20px
 					border-radius: 10px
 					margin-bottom: 30px
-					.speedbar
-						margin-bottom: 35px
-						a
-							color: #337ab7
 					.h1
 						font-size: 32px
 					.info
@@ -870,7 +1087,7 @@ a, input
 			font-size: 20px
 			a
 				color: #337ab7
-		.seed
+		.seed, .copy
 			font-size: 20px
 			display: flex
 			align-items: flex-start
@@ -879,7 +1096,7 @@ a, input
 			strong
 				margin-right: 10px
 				line-height: 1
-			#myInput
+			#myInput, #myInput1, #myInput2
 				line-height: 1
 				max-width: fit-content
 				margin-right: 5px
@@ -905,8 +1122,10 @@ a, input
 				width: 20px
 				height: 20px
 				.tooltiptext 
+					font-weight: 500 !important
 					visibility: hidden 
-					min-width: 140px 
+					min-width: 170px 
+					font-size: 16px !important
 					background-color: #555 
 					color: #fff 
 					text-align: center 
@@ -1137,7 +1356,7 @@ a, input
 .smiles--list .list::-webkit-scrollbar-track
 	background: transparent
 .smiles--list .list::-webkit-scrollbar-thumb
-	background-color: blue
+	background-color: #B5B5B5
 	border-radius: 10px
 	border: 3px solid #DEDEDE
 
@@ -1154,6 +1373,7 @@ a, input
 		display: flex
 		align-items: center
 		img
+			margin-bottom: 0
 			position: relative
 			display: block
 			object-fit: cover
@@ -1300,7 +1520,7 @@ textarea:focus, select:focus, input[type="text"]:focus, input[type="password"]:f
 				color: $white
 				padding: 11px 57px
 				max-width: 186px
-				min-height: 40px
+				height: 40px
 				width: 100%
 				font-weight: bold
 				user-select: none
@@ -1343,7 +1563,10 @@ label
 			display: block
 			position: absolute
 			content: ""
-			background-image: url("data:image/svg+xmlcharset=UTF-8,%3csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 5L4 8L11 1' stroke='%23292929' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+			background-image: url('data:image/svg+xml,\
+				<svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">\
+				<path d="M1 5L4 8L11 1" stroke="#292929" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>\
+				</svg>')
 			background-repeat: no-repeat
 			background-size: 13px
 			height: 20px
@@ -1361,5 +1584,39 @@ label
 			display: inline-block
 			line-height: 1
 			white-space: nowrap
+
+form
+	#news-sort
+		cursor: pointer
+		display: flex
+		gap: 5px
+		align-items: center
+		.arrows--prev
+			background-image: url('data:image/svg+xml,\
+			<svg width="16" height="12" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">\
+				<path d="M17 7.5H1M1 7.5L7 1.5M1 7.5L7 13.5" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>\
+			</svg>')
+			filter: invert(0)
+			background-repeat: no-repeat
+			background-position: center
+			transform: rotate(-90deg)
+	.sort
+		display: none
+		li
+			padding-bottom: 10px
+			text-align: right
+			&:last-child
+				padding-bottom: 0
+		&.open
+			display: block
+			position: absolute
+			background-color: $white
+			right: 0
+			top: 70px
+			border-radius: 5px
+			border: 1px solid
+			padding: 10px 20px
+			z-index: 9
+
 
 @import "media"

@@ -102,7 +102,7 @@
 			<div class="container">
 				<div class="row">
 
-					<section class="blog">
+					<section class="blog servers--inner">
 						<div class="blocks--wrapper">
 							<div class="blog--sidebar">
 								<div class="help border-radius">
@@ -161,311 +161,154 @@
 									</ul>
 								</div>
 							</div>
-							<div class="blog--posts inner">
+							<div class="blog--posts inner main--info">
 								<article class="shortstory">
 									<div class="shortstory--image">
 										<div class="mainstory">
 											<div class="image">
-												<img src="img/Rectangle 12.png" alt='Майнкрафт ПЕ 1.20'>
+												<img src="img/servers/Rectangle 23.png" alt='ModsCraft'>
 											</div>
-										</div>
-										<div class="date__views">
-											<div class="date">
-												<img src="img/Clock.svg" alt="#">
-												<p>14-12-2022, 21:49</p>
-											</div>
-											<div class="views">
-												<img src="img/eye1.svg" alt="#">
-												<p>748 683</p>
-											</div>
-										</div>
-									</div>
-									<div class="mobile wrapper">
-										<a href="#" class="shortstory--download button">
-											<div class="icon"></div>
-											<span>Скачать</span>
-										</a>
-										<div class="shortstory--bar">
-											<div class="price">
-												<strong>Цена:</strong> <span>Бесплатно</span>
-											</div>
-											<div class="rating">
-												<div class="rate">
-													<ul class="unit-rating">
-														<li class="current-rating" style="width:100%;">100</li>
-														<li><a href="#" title="Плохо" class="r1-unit">1</a></li>
-														<li><a href="#" title="Приемлемо" class="r2-unit">2</a></li>
-														<li><a href="#" title="Средне" class="r3-unit">3</a></li>
-														<li><a href="#" title="Хорошо" class="r4-unit">4</a></li>
-														<li><a href="#" title="Отлично" class="r5-unit">5</a></li>
-													</ul>
-												</div>
-											</div>
+											<h1 class="h1">ModsCraft</h1>
+											<ul class="list">
+												<li>
+													<span>IP сервера</span>
+													<div class="copy">
+														<input type="text" value="craft.pe:19132" id="myInput1">
+														<div class="tooltip">
+															<button onclick="myFunction1()" onmouseout="outFunc()">
+																<span class="tooltiptext" id="myTooltip1">Скопировать в буфер</span>
+															</button>
+														</div>
+														<script>
+															function myFunction1() {
+																var copyText = document.getElementById("myInput1");
+																copyText.select();
+																document.execCommand("copy");
+																var tooltip = document.getElementById("myTooltip1");
+																tooltip.innerHTML = "Скопировано";
+															}
+															function outFunc() {
+																var tooltip = document.getElementById("myTooltip1");
+																tooltip.innerHTML = "Скопировать в буфер";
+															}
+														</script>
+													</div>
+												</li>
+												<li>
+													<span>Порт сервера</span>
+													<div class="copy">
+														<input type="text" value="19132" id="myInput2">
+														<div class="tooltip">
+															<button onclick="myFunction2()" onmouseout="outFunc()">
+																<span class="tooltiptext" id="myTooltip2">Скопировать в буфер</span>
+															</button>
+														</div>
+														<script>
+															function myFunction2() {
+																var copyText = document.getElementById("myInput2");
+																copyText.select();
+																document.execCommand("copy");
+																var tooltip = document.getElementById("myTooltip2");
+																tooltip.innerHTML = "Скопировано";
+															}
+															function outFunc() {
+																var tooltip = document.getElementById("myTooltip2");
+																tooltip.innerHTML = "Скопировать в буфер";
+															}
+														</script>
+													</div>
+												</li>
+												<li>
+													<span>Название</span>
+													<p>ModsCraft</p>
+												</li>
+												<li>
+													<span>Статус</span>
+													<p><img src="img/image 18.png" alt=""></p>
+												</li>
+												<li>
+													<span>Слотов</span>
+													<p class="slots">500</p>
+												</li>
+												<li>
+													<span>Версия</span>
+													<p class="version">1.1-1.19.50</p>
+												</li>
+												<li>
+													<span>Тип сервера</span>
+													<p>Выживание, PvP, кланы, выживание на островах</p>
+												</li>
+												<li>
+													<span>Веб-сайт</span>
+													<p><a href="//craft.pe/">craft.pe /</a> <a href="//vk.com/play.modscraft">vk.com / </a><a href="//play.modscraft">play.modscraft</a></p>
+												</li>
+												<li>
+													<span>Зарегистрирован</span>
+													<p>9 июня в 00:00, 2021</p>
+												</li>
+												<li>
+													<span>Последнее обновление</span>
+													<p>30 ноября 2022г.</p>
+												</li>
+												<li>
+													<span>Количество просмотров</span>
+													<p>28 893</p>
+												</li>
+												<li>
+													<span>Рейтинг</span>
+													<div class="rating">
+														<div class="rate">
+															<ul class="unit-rating">
+																<li class="current-rating" style="width:100%;">100</li>
+																<li><a href="#" title="Плохо" class="r1-unit">1</a></li>
+																<li><a href="#" title="Приемлемо" class="r2-unit">2</a></li>
+																<li><a href="#" title="Средне" class="r3-unit">3</a></li>
+																<li><a href="#" title="Хорошо" class="r4-unit">4</a></li>
+																<li><a href="#" title="Отлично" class="r5-unit">5</a></li>
+															</ul>
+														</div>
+													</div>
+												</li>
+											</ul>
 										</div>
 									</div>
 									<div class="shortstory--base">
-										<div class="speedbar">
-											<span id="dle-speedbar">
-												<span itemscope="" itemtype="https://schema.org/BreadcrumbList">
-													<span itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-														<meta itemprop="position" content="1">
-														<a href="index.html" itemprop="item">
-															<span itemprop="name">ModsCraft</span>
-														</a>
-													</span>
-													»
-													<span itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-														<meta itemprop="position" content="2">
-														<a href="index.html/mods.html" itemprop="item">
-															<span itemprop="name">Моды</span>
-														</a>
-													</span> 
-													» 
-													Мод: Декоративная мебель Ланса
-												</span>
-											</span>
-										</div>
-										<h1 class="h1">Майнкрафт ПЕ 1.20</h1>
-										<ul class="social">
-											<li>
-												<a href="https://vk.com/share.php?url=https%3A%2F%2Fmodscraft.net%2Fmods%2F2040-decoration-furniture-addon-mod.html&title=%D0%9C%D0%BE%D0%B4%20Lance%20Furniture%20%D0%B4%D0%BB%D1%8F%20Minecraft&utm_source=share2">
-													<img src="img/vk.png" alt="vk" title="ВК">
-												</a>
-											</li>
-											<li>
-												<a href="https://t.me/share/url?url=https%3A%2F%2Fmodscraft.net%2Fmods%2F2040-decoration-furniture-addon-mod.html&text=%D0%9C%D0%BE%D0%B4%20Lance%20Furniture%20%D0%B4%D0%BB%D1%8F%20Minecraft&utm_source=share2">
-													<img src="img/telegram.png" alt="telegram" title="Телеграм">
-												</a>
-											</li>
-											<li>
-												<a href="https://twitter.com/intent/tweet?text=%D0%9C%D0%BE%D0%B4%20Lance%20Furniture%20%D0%B4%D0%BB%D1%8F%20Minecraft&url=https%3A%2F%2Fmodscraft.net%2Fmods%2F2040-decoration-furniture-addon-mod.html&utm_source=share2">
-													<img src="img/twitter.png" alt="twitter" title="Твиттер">
-												</a>
-											</li>
-											<li class="more"><img src="img/more.png" alt="more"></li>
-											<li class="more--wrapper">
-												<ul>
-													<li>
-														<a href="https://api.whatsapp.com/send?text=%D0%9C%D0%BE%D0%B4%20Lance%20Furniture%20%D0%B4%D0%BB%D1%8F%20Minecraft%20https%3A%2F%2Fmodscraft.net%2Fmods%2F2040-decoration-furniture-addon-mod.html&amp;utm_source=share2"
-															rel="nofollow noopener" target="_blank" title="WhatsApp">
-															<span class="ya-share2__badge">
-																<span class="ya-share2__icon"></span>
-															</span>
-														</a>
-													</li>
-													<li class="ya-share2__item ya-share2__item_service_moimir">
-														<a class="ya-share2__link"
-															href="https://connect.mail.ru/share?url=https%3A%2F%2Fmodscraft.net%2Fmods%2F2040-decoration-furniture-addon-mod.html&amp;title=%D0%9C%D0%BE%D0%B4%20Lance%20Furniture%20%D0%B4%D0%BB%D1%8F%20Minecraft&amp;utm_source=share2"
-															rel="nofollow noopener" target="_blank" title="Мой Мир">
-															<span class="ya-share2__badge">
-																<span class="ya-share2__icon"></span>
-															</span>
-														</a>
-													</li>
-													<li class="ya-share2__item ya-share2__item_service_pinterest">
-														<a class="ya-share2__link"
-															href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fmodscraft.net%2Fmods%2F2040-decoration-furniture-addon-mod.html&amp;description=%D0%9C%D0%BE%D0%B4%20Lance%20Furniture%20%D0%B4%D0%BB%D1%8F%20Minecraft&amp;utm_source=share2"
-															rel="nofollow noopener" target="_blank" title="Pinterest" data-pin-do="none">
-															<span class="ya-share2__badge">
-																<span class="ya-share2__icon"></span>
-															</span>
-														</a>
-													</li>
-													<li class="ya-share2__item ya-share2__item_copy">
-														<a class="ya-share2__link ya-share2__link_copy"
-															href="javascript:void(0);" title="Скопировать ссылку">
-															<span class="ya-share2__badge ya-share2__badge_copy">
-																<span class="ya-share2__icon ya-share2__icon_copy"></span>
-															</span>
-															<span class="ya-share2__title">Скопировать ссылку</span>
-														</a>
-														<input class="ya-share2__input_copy" value="https://modscraft.net/mods/2040-decoration-furniture-addon-mod.html">
-													</li>
-												</ul>
-											</li>
-										</ul>
 										<p class="info">
-											Майнкрафт 1.20 был анонсирован на Minecraft Live 2022 — новое крупное игровое обновление. Верблюды,
-											Нюхач, новые таблички, плоты и многое другое!
+											Официальный сервер нашего портала — ModsCraft Play! Приятное выживание, возможность вступать в клан или создать собственный, свадьбы, мобы, механизмы…
 										</p>
-										<div class="highlighting">
-											<span>Статья будет дополняться.</span>
-										</div>
 										<div class="main--info">
 											<div class="single--navigation">
-												<h2 class="h2">Навигация</h2>
+												<h2 class="h2">Особенности сервера</h2>
 												<ul>
-													<li><a href="#"> Новые скины </a></li>
-													<li>
-														<span>Мобы</span>
-														<ul>
-															<li><a href="#">Верблюд</a></li>
-															<li><a href="#">Нюхач</a></li>
-														</ul>
-													</li>
-													<li><a href="#">Бамбуковый плот</a></li>
-													<li><a href="#">Блоки</a></li>
-													<li>
-														<span>Блоки</span>
-														<ul>
-															<li><a href="#">Висячая табличка</a></li>
-															<li><a href="#">Резная полка</a></li>
-															<li><a href="#">Бамбуковые доски</a> </li>
-															<li><a href="#">Бамбуковая мозаика</a></li>
-														</ul>
-													</li>
-													<li>
-														<span>Предметы</span>
-														<ul>
-															<li><a href="#">Древние семена</a></li>
-														</ul>
-													</li>
-													<li><a href="#">Вопросы и ответы</a></li>
+													<li>Три сервера с выживанием</li>
+													<li>BedWars</li>
+													<li>Кланы</li>
+													<li>Всегда высокий онлайн</li>
+													<li>Модераторы всегда следят за нарушителями</li>
 												</ul>
 											</div>
-											<h2 class="h2">Новые скины</h2>
+											<h2 class="h2">Как купить донат на МодсКрафт?</h2>
 											<div class="text">
-												Стив и Алекс долгое время были единственными официальными ванильными скинами. Разработчики добавят 7 новых скинов.
+												Перейдите на сайт craft.pe. Введите свой ник и выберите необходимую привилегию или количество кейсов.
 											</div>
-											<img src="img/image 15.png" alt="#">
-											<h2 class="h2">Мобы</h2>
-											<div class="text"> Пока что анонсировано два моба: </div>
-											<div class="single--navigation">
-												<h2 class="h2">Верблюд</h2>
-												<ul>
-													<li>Ездовое животное</li>
-													<li>Обитает в Пустыне</li>
-													<li>Ест кактусы</li>
-													<li>Можно кататься вдвоем</li>
-													<li>Можно размножать</li>
-													<li>Перепрыгивает через овраги и реки</li>
-												</ul>
+											<div class="text">
+												Если у вас есть промокод на скидку, то введите его в соответствующее поле.
 											</div>
-											<img src="img/image 15(1).png" alt="#">
-											<div class="single--navigation">
-												<h2 class="h2">Нюхач</h2>
-												<ul>
-													<li>Победил на Minecraft Live 2022</li>
-													<li>Древнее существо</li>
-													<li>Вылупляется из яиц</li>
-													<li>Яйца появляются в сундуках Подводных руин</li>
-													<li>Можно размножать</li>
-													<li>Ищет Древние семена</li>
-												</ul>
+											<img src="img/screen.png" alt="#">
+											<div class="text">
+												После нажатия по кнопке Купить вам перенаправит на сайт оплаты. Выберите удобную для себя платёжную систему и оплатите покупку доната.
 											</div>
-											<img src="img/image 15(2).png" alt="#">
-											<div class="questions_answer">
-												<h2 class="h2">Вопросы и ответы</h2>
-												<ul class="questions">
-													<li>
-														<span>— Когда выйдет Майнкрафт 1.20?</span>
-														<span>Первые беты и снапшоты начнут выходить скоро. Релиз обновления — в 2023 году.</span>
-													</li>
-													<li>
-														<span>— Обновление без названия?</span>
-														<span>Разработчики вместе с игроками выберут название ближе к релизу обновления.</span>
-													</li>
-													<li>
-														<span>— Почему так мало?</span>
-														<span>Разработчики анонсировали только то, что уже готово к внедрению. Остальной контент будет появляться постепенно.</span>
-													</li>
-													<li>
-														<span>— Как скачать Майнкрафт 1.20?</span>
-														<span>Это будет возможно только с выходом снапшотов и тестовых сборок.</span>
-													</li>
-												</ul>
+											<img src="img/image 16.png" alt="#">
+											<h2 class="h2 border-top">Обновление 30 ноября</h2>
+											<div class="text"> Добавлена поддержка <a href="#">Майнкрафт 1.19.50</a></div>
+											<h2 class="h2 border-top">Скриншоты сервера:</h2>
+											<div class="scroll">
+												<img src="img/Rectangle 24.png" alt="#">
+												<img src="img/Rectangle 25.png" alt="#">
+												<img src="img/Rectangle 24.png" alt="#">
+												<img src="img/Rectangle 25.png" alt="#">
 											</div>
-											<div class="follow">
-												Следи за новостями в нашем Telegram (<a href="//t.me/modscraft" target="_blank">t.me/modscraft</a>)!
-											</div>
-											<div class="seed">
-												<strong>Сид:</strong> <input type="text" value="3100535380006071676" id="myInput">
-												<div class="tooltip">
-													<button onclick="myFunction()" onmouseout="outFunc()">
-														<span class="tooltiptext" id="myTooltip">Скопировать в буфер</span>
-													</button>
-												</div>
-												<script>
-													function myFunction() {
-														var copyText = document.getElementById("myInput");
-														copyText.select();
-														document.execCommand("copy");
-														var tooltip = document.getElementById("myTooltip");
-														tooltip.innerHTML = "Скопировано";
-													}
-													function outFunc() {
-														var tooltip = document.getElementById("myTooltip");
-														tooltip.innerHTML = "Скопировать в буфер";
-													}
-												</script>
-											</div>
-											<div class="goto-files" id="goto-files">
-												<div class="goto-files-button"> 
-													<button type="button" class="flex middle center">
-														<div class="flex middle center"> 
-															<span class="flex middle center"> 
-																<span class="goto-files-icon">
-																	<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<path d="M13.75 6.25H8.75C7.36929 6.25 6.25 7.36929 6.25 8.75V21.25C6.25 22.6307 7.36929 23.75 8.75 23.75H21.25C22.6307 23.75 23.75 22.6307 23.75 21.25V15.3125M23.75 6.25H18.75M23.75 6.25V11.25M23.75 6.25L11.25 18.75"
-																			stroke="#2B91F8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-																	</svg>
-																</span> 
-															</span>
-															<div class="flex middle center">К файлам</div>
-														</div>
-													</button>
-												</div>
-											</div>
-											<div class="downloads download-area" id="thisElement">
-												<a href="#" class="download">
-													<span class="icon google"></span>
-													<div class="download--wrapper">
-														<span>Скачать Minecraft</span>
-														<span>Перейти в Google Play</span>
-													</div>
-													<div class="follow"></div>
-												</a>
-												<a href="#" class="download">
-													<span class="icon appstore"></span>
-													<div class="download--wrapper">
-														<span>Скачать Minecraft</span>
-														<span>Перейти в Google Play</span>
-													</div>
-													<span class="follow"></span>
-												</a>
-												<a href="#" class="download">
-													<span class="icon microsoft"></span>
-													<div class="download--wrapper">
-														<span>Скачать Minecraft</span>
-														<span>Перейти в Google Play</span>
-													</div>
-													<span class="follow"></span>
-												</a>
-											</div>
-										</div>
-									</div>
-									<div class="shortstory--related">
-										<div class="title">
-											<h2 class="h2">Похожие материалы</h2>
-											<div class="slider--arrows arrows"></div>
-										</div>
-										<div class="slider">
-											<a href="#" class="slider--item">
-												<img src="img/Rectangle 19(3).png" alt="#">
-												<p>Майнкрафт ПЕ 1.19</p>
-											</a>
-											<a href="#" class="slider--item">
-												<img src="img/Rectangle 19.png" alt="#">
-												<p>Майнкрафт ПЕ 1.18</p>
-											</a>
-											<a href="#" class="slider--item">
-												<img src="img/Rectangle 19(1).png" alt="#">
-												<p>Майнкрафт ПЕ 1.17</p>
-											</a>
-											<a href="#" class="slider--item">
-												<img src="img/Rectangle 19(3).png" alt="#">
-												<p>Майнкрафт ПЕ 1.19</p>
-											</a>
+											
 										</div>
 									</div>
 									<div class="dcomments border-radius">
