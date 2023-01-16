@@ -77,10 +77,16 @@ $(function() {
 		}
 	});
 
-	$('.smile').click(function() {
+	$('#dle-comments-form .smile').click(function() {
 		let smile = $(this).attr('alt');
-		let text = $("#comments").val();
-		$("#comments").focus().val(text + smile)
+		let text = $("#dle-comments-form #comments").val();
+		$("#dle-comments-form #comments").focus().val(text + smile);
+	});
+
+	$('#dlemasscomments .smile').click(function() {
+		let smile = $(this).attr('alt');
+		let text = $("#dlemasscomments #comments").val();
+		$("#dlemasscomments #comments").focus().val(text + smile);
 	});
 
 	const opened_sort = document.querySelectorAll('ul.sort')[0];
