@@ -160,6 +160,11 @@
 					transform: translate(0)
 		img
 			max-width: 110px
+	.skins
+		&--base
+			gap: 20px
+			.skin
+				max-width: calc(20% - 20px)
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 1000px)
@@ -270,10 +275,19 @@
 						img
 							width: 240px
 							height: 100%
+				&--base
+					.h1
+						font-size: 24px
 		&.servers 
 			.blog--posts
 				flex-direction: row
 				gap: 20px
+	.skins
+		&--categories
+			.row
+				flex-wrap: nowrap
+				overflow: auto
+				gap: 10px
 	.footer
 		&--wrapper
 			flex-wrap: wrap
@@ -283,6 +297,13 @@
 					width: 100%
 		&--bottom .list
 			flex-wrap: wrap
+	.single
+		.blog
+			&--posts
+				.shortstory
+					&--base
+						.h1
+							font-size: 24px
 
 @media only screen and (max-width : 612px)
 	.blog
@@ -347,10 +368,20 @@
 								p, span
 									font-size: 16px
 	.single
-		.blog--posts 
-			.shortstory
-				&--image
-					margin-bottom: 20px
+		.blog
+			&--posts 
+				.shortstory
+					&--image
+						margin-bottom: 20px
+					&--base
+						padding: 10px
+						.main__title
+							flex-wrap: wrap
+							gap: 12px
+							margin-bottom: 20px
+							padding-bottom: 20px
+						.h1
+							font-size: 20px
 	.form_submit
 		flex-direction: column
 		gap: 20px
@@ -359,6 +390,27 @@
 			justify-content: start
 	input[name="sec_code"]
 		width: calc(100% - 88px)
+	.skins
+		&--base
+			gap: 20px
+			.skin
+				max-width: calc(33.3333% - 20px)
+		.skin
+			.main
+				&__image
+					border-bottom: none
+					margin-bottom: 0
+			.button.download
+				padding: 10px 20px
+	details 
+		summary
+			font-size: 20px
+		.details_content
+			li
+				font-size: 16px
+				&::before
+					top: 6px
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -439,8 +491,6 @@
 							margin-bottom: 13px
 							a, span
 								font-size: 14px
-						.h1
-							font-size: 24px
 	#dle-comments-list 
 		> .comments-tree-list 
 			> li 
@@ -608,7 +658,11 @@
 											max-width: 120px
 										#myInput2
 											max-width: 55px
-
+	.skins
+		&--base
+			gap: 20px
+			.skin
+				max-width: calc(52% - 20px)
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */

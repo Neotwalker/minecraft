@@ -127,6 +127,7 @@ a, input
 		display: flex
 		justify-content: space-between
 		gap: 30px
+		align-items: flex-start
 
 .button
 	display: inline-block
@@ -276,7 +277,7 @@ a, input
 	gap: 30px
 	background: linear-gradient(90.04deg, $accent 19.6%, #22329B 78.71%)
 	border-radius: 10px
-	padding: 20px 6%
+	padding: 30px 6%
 	color: $white
 	a
 		position: relative
@@ -298,10 +299,20 @@ a, input
 			gap: 10px
 
 .blog
+	.breadcrumbs
+		flex: 1 1 100%
+		padding: 20px
+		width: 100%
+		display: flex
+		justify-content: space-between
+		background-color: $white
+		border-radius: 10px
+		margin-bottom: 10px
 	.speedbar
-		margin-bottom: 35px
 		a
 			color: #337ab7
+		a, span
+			font-size: 18px
 	&--sidebar
 		max-width: calc(25% - 30px)
 		width: 100%
@@ -448,8 +459,6 @@ a, input
 		display: flex
 		flex-wrap: wrap
 		margin-bottom: 30px
-		.speedbar
-			margin-bottom: 0
 		.blog
 			&--posts
 				display: flex
@@ -458,14 +467,6 @@ a, input
 				flex-wrap: wrap
 				.button.download
 					margin: 0
-				.breadcrumbs
-					flex: 1 1 100%
-					padding: 20px
-					width: 100%
-					display: flex
-					justify-content: space-between
-					background-color: $white
-					border-radius: 10px
 				.server
 					background-color: $white
 					padding: 15px
@@ -548,6 +549,147 @@ a, input
 										padding: 7px 10px
 										border-radius: 5px
 										color: $white
+	
+.skins
+	&--categories
+		background-color: $white
+		padding: 20px
+		margin-bottom: 10px
+		.row
+			display: flex
+			flex-wrap: wrap
+			gap: 15px
+			max-width: 852px
+			padding: 0
+			a
+				padding: 10px 18px
+				border: 1px solid #dedede
+				border-radius: 5px
+				white-space: nowrap
+				line-height: 1
+				&.active
+					color: #337ab7
+					font-weight: 500
+	&--base
+		background-color: $white
+		padding: 20px
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		gap: 23px
+		margin-bottom: 30px
+		.skin
+			max-width: calc(16.7% - 23px)
+	.navigation
+		margin-top: 0
+	.skin
+		.main
+			&__title
+				margin-top: 30px
+				padding-bottom: 30px
+				margin-bottom: 20px
+				border-bottom: 1px solid #DEDEDE
+				display: flex
+				justify-content: space-between
+				.date__views
+					padding: 0
+					gap: 35px
+			&__image
+				padding-bottom: 20px
+				margin-bottom: 20px
+				border-bottom: 1px solid #DEDEDE
+		.button.download
+			align-items: center
+			border-radius: 10px
+			margin: 0
+			color: #fff
+			display: flex
+			gap: 15px
+			padding: 12px 20px
+			padding-left: 47.5px
+			width: 100%
+			min-height: 68px
+			span
+				font-weight: normal
+				font-size: 18px
+				&:first-child
+					font-weight: bold
+			.follow
+				background-image: url(../img/follow.svg)
+				display: inline-block
+				height: 30px
+				margin-bottom: 0
+				width: 30px
+			.download--wrapper
+				display: flex
+				flex-direction: column
+				align-items: flex-start
+				gap: 5px
+
+details
+	border: 1px solid #DEDEDE
+	border-radius: 10px
+	cursor: pointer
+	margin-bottom: 20px
+	summary
+		font-size: 24px
+		font-weight: bold
+		list-style-type: none
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 10px
+		span
+			line-height: 1.5
+			padding-left: 20px
+			padding-top: 10px
+			padding-bottom: 10px
+		.open
+			margin-right: 20px
+			display: inline-block
+			width: 14px
+			height: 2px
+			background-color: #292929
+			border-radius: 2px
+			position: relative
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				height: 14px
+				width: 2px
+				background-color: #292929
+				border-radius: 2px
+				top: -6px
+				left: 6px
+	&[open]
+		.open::before
+			display: none
+	.details_content
+		padding: 0 20px 10px
+		padding-top: 10px
+		border-top: 1px solid #dedede
+		li
+			font-size: 20px
+			margin-bottom: 15px
+			position: relative
+			padding-left: 15px
+			line-height: 1.3
+			&::before
+				background-color: #0a8828
+				border-radius: 2px
+				content: ""
+				display: block
+				height: 10px
+				left: 0
+				position: absolute
+				top: 8px
+				width: 10px
+			&:last-child
+				margin-bottom: 0
+			a
+				margin-left: 4px
+				color: #337ab7
 
 .servers
 	&--inner
@@ -607,7 +749,7 @@ a, input
 									margin-bottom: 0
 									align-items: center
 									button
-										background-image: url('data:image/svg+xml;charset=utf-8,\
+										background-image: url('data:image/svg+xmlcharset=utf-8,\
 										<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">\
 											<path d="M6.33398 8.83332C6.33398 7.17646 7.67713 5.83331 9.33398 5.83331H15.0006C16.6575 5.83331 18.0007 7.17646 18.0007 8.83331V14.5C18.0007 16.1568 16.6575 17.5 15.0007 17.5H9.33399C7.67713 17.5 6.33398 16.1568 6.33398 14.5V8.83332Z" stroke="#292929" stroke-linecap="round" stroke-linejoin="round"/>\
 											<path d="M14.666 2.50002L5.99935 2.50002C4.3425 2.50002 2.99935 3.84317 2.99935 5.50002L2.99935 14.1667" stroke="#292929" stroke-linecap="round" stroke-linejoin="round"/>\
