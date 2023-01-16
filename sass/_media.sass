@@ -665,9 +665,8 @@
 				max-width: calc(52% - 20px)
 /*==========  Mobile First  ==========*/
 
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px)
-.servers
+@media only screen and (max-width : 320px)
+	.servers
 		&--inner 
 			.main--info 
 				.shortstory
@@ -677,11 +676,13 @@
 								li
 									gap: 10px
 									span
-										max-width: 140px
+										max-width: 120px
 									p, div
 										max-width: 120px
 
-
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 481px)
