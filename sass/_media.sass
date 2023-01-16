@@ -13,21 +13,108 @@
 			width: 100%
 
 @media only screen and (max-width : 1200px)
+	.main
+		&--wrapper
+			.content
+				margin-top: 100px
 	.header
 		min-height: 80px
+		padding-bottom: 20px
+		position: fixed
+		width: 100%
+		left: 0
+		top: 0
 		&--top
 			margin-bottom: 0
 		&--bottom
-			display: none
-		&--mobile
-			&.menu--open
-				display: block
+			position: fixed
+			left: -100%
+			transition: left 0s linear .2s,opacity .2s linear .2s,visibility 0s .4s
+			z-index: 2
+			background-color: transparent
+			margin-top: 80px
+			top: 0
+			opacity: 0
+			visibility: hidden
+			.background-menu
+				width: 100%
+				height: 100%
+				z-index: 1
 				position: absolute
 				left: 0
+				top: 0
+			&.open
+				opacity: 1
+				visibility: visible
+				width: 100%
+				height: 100%
+				top: 0
+				transition: left linear,opacity .2s linear,visibility
+				left: 0
+				background-color: rgba(0,0,0,.45)
+				.menu
+					overflow: auto
+					transform: translate3d(0,0,0)
+					transition: transform .3s .2s
+			.menu
+				z-index: 99
+				position: relative
+				padding: 30px 20px
+				background-color: $white
+				width: 346px
+				height: 100%
+				transform: translate3d(-100%,0,0)
+				transition: transform .3s
+				flex-direction: column
+				justify-content: flex-start
+				.list
+					display: flex
+					flex-direction: column
+					gap: 33px
+					&.left
+						margin-bottom: 33px
+					li
+						margin-left: 50px
+						.icon
+							&::before
+								content: ""
+								background-image: url(../img/new_terrain_menu.png)
+								background-repeat: no-repeat
+								width: 31px
+								height: 31px
+								position: absolute
+								left: 20px
+							&-download::before
+								background-position: -256px 0
+							&-mods::before
+								background-position: -64px 0
+							&-maps::before
+								background-position: -34px 0
+							&-textures::before
+								background-position: -128px 0
+							&-shaders::before
+								background-position: -320px 0
+							&-seeds::before
+								background-position: -352px 0
+							&-skins::before
+								background-position: -160px 0
+							&-servers::before
+								background-position: -420px 0
+							&-news::before
+								background-position: 0 0
+							&-soft::before
+								background-position: -192px 0
+							&-guides::before
+								background-position: -290px 0
+							&-other::before
+								background-position: -387px 0
 	.logo
 		display: flex
 		align-items: center
 		gap: 10px
+		a
+			display: inline-block
+			line-height: 1
 		.burger
 			width: 40px
 			height: 40px
@@ -83,7 +170,7 @@
 			font-size: 16px
 	.blog
 		&--sidebar
-			max-width: 230px
+			max-width: calc(30% - 20px)
 			.help .list li
 				font-size: 16px
 			.top__news
@@ -93,6 +180,7 @@
 							white-space: normal
 							line-height: 1.1
 		&--posts
+			max-width: calc(72% - 20px)
 			.shortstory
 				.mainstory
 					line-height: 0.8
@@ -124,7 +212,7 @@
 							width: 24px
 							height: 24px
 							background-repeat: no-repeat
-							background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' %3F%3E%3Csvg style='enable-background:new 0 0 36 36;' version='1.1' viewBox='0 0 36 36' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23222A30;%7D .st1%7Bfill:none;stroke:%23222A30;stroke-width:2.0101;stroke-linejoin:round;stroke-miterlimit:10;%7D .st2%7Bfill:%23171715;%7D .st3%7Bfill-rule:evenodd;clip-rule:evenodd;fill:%23222A30;%7D%0A%3C/style%3E%3Cg id='Layer_1'/%3E%3Cg id='icons'%3E%3Cpath class='st0' d='M6.2,3.5L3.5,6.2c-0.7,0.7-0.7,1.9,0,2.7l9.2,9.2l-9.2,9.2c-0.7,0.7-0.7,1.9,0,2.7l2.6,2.6 c0.7,0.7,1.9,0.7,2.7,0l9.2-9.2l9.2,9.2c0.7,0.7,1.9,0.7,2.7,0l2.6-2.6c0.7-0.7,0.7-1.9,0-2.7L23.3,18l9.2-9.2 c0.7-0.7,0.7-1.9,0-2.7l-2.6-2.6c-0.7-0.7-1.9-0.7-2.7,0L18,12.7L8.8,3.5C8.1,2.8,6.9,2.8,6.2,3.5z' id='close_1_'/%3E%3C/g%3E%3C/svg%3E")
+							background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' %3F%3E%3Csvg style='enable-background:new 0 0 36 36' version='1.1' viewBox='0 0 36 36' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23222A30%7D .st1%7Bfill:nonestroke:%23222A30stroke-width:2.0101stroke-linejoin:roundstroke-miterlimit:10%7D .st2%7Bfill:%23171715%7D .st3%7Bfill-rule:evenoddclip-rule:evenoddfill:%23222A30%7D%0A%3C/style%3E%3Cg id='Layer_1'/%3E%3Cg id='icons'%3E%3Cpath class='st0' d='M6.2,3.5L3.5,6.2c-0.7,0.7-0.7,1.9,0,2.7l9.2,9.2l-9.2,9.2c-0.7,0.7-0.7,1.9,0,2.7l2.6,2.6 c0.7,0.7,1.9,0.7,2.7,0l9.2-9.2l9.2,9.2c0.7,0.7,1.9,0.7,2.7,0l2.6-2.6c0.7-0.7,0.7-1.9,0-2.7L23.3,18l9.2-9.2 c0.7-0.7,0.7-1.9,0-2.7l-2.6-2.6c-0.7-0.7-1.9-0.7-2.7,0L18,12.7L8.8,3.5C8.1,2.8,6.9,2.8,6.2,3.5z' id='close_1_'/%3E%3C/g%3E%3C/svg%3E")
 						&--input
 							position: absolute
 							left: 30px
@@ -203,7 +291,7 @@
 					display: block
 					position: absolute
 					background-color: $white
-					left: 70%
+					left: 0
 					top: 44px
 					border-radius: 5px
 					box-shadow: 0 2px 20px rgba(0, 0, 0, 12%)
@@ -217,10 +305,32 @@
 						gap: 5px
 						cursor: pointer
 						.arrow-bottom
-							margin-top: 4px
+							margin-top: 8px
 						.head
 							font-weight: bold
 							line-height: normal
+		&--posts
+			.shortstory
+				&--image
+					margin-bottom: 20px
+				.mainstory
+					flex-direction: column
+					gap: 10px
+					.image
+						img
+							max-width: 100%
+							width: 100%
+							border-top-right-radius: 10px
+							border-radius: 10px
+							display: block
+					.texts
+						padding: 0 20px 10px
+	.single
+		.blog
+			&--posts 
+			.shortstory
+				&--image
+					margin-bottom: 20px
 	.form_submit
 		flex-direction: column
 		gap: 20px
@@ -250,22 +360,12 @@
 		&--posts
 			.shortstory
 				.mainstory
-					flex-direction: column
-					gap: 10px
 					.image
-						img
-							max-width: 100%
-							width: 100%
-							border-top-right-radius: 10px
-							border-radius: 10px
-							display: block
 						.important
 							top: 10px
 							left: 10px
 							font-size: 14px
 							padding: 6.5px 10px
-					.texts
-						padding: 0 20px 10px
 	.footer
 		&--wrapper
 			gap: 20px
@@ -281,11 +381,6 @@
 				align-items: flex-start
 			.image
 				text-align: left
-	.navigation
-		.pages
-			display: flex
-			justify-content: center
-			gap: 5px
 	.single
 		.blog
 			.social
@@ -347,7 +442,15 @@
 				.bbcodes
 					max-width: 100%
 					width: 100%
-
+	.navigation
+		.pages
+			padding: 0 10px
+			display: flex
+			justify-content: center
+			gap: 10px
+			a
+				&:nth-child(3), &:nth-child(4), &:nth-child(5)
+					display: none
 	
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 380px)
@@ -396,12 +499,6 @@
 						p
 							-webkit-line-clamp: 3
 							margin-right: 0
-	.navigation
-		.pages
-			padding: 0 10px
-			a
-				&:nth-child(3), &:nth-child(4), &:nth-child(5)
-					display: none
 	.single
 		.main--info
 			.seed

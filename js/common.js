@@ -1,11 +1,11 @@
 $(function() {
 
 	function mobileMenu() {
-		if (!($('.header--mobile').hasClass("open"))) {
-			$(".header--mobile").addClass("open");
+		if (!($('.header--bottom').hasClass("open"))) {
+			$(".header--bottom").addClass("open");
 			$("body").css("overflow", "hidden");
 		} else {
-			$(".header--mobile").removeClass("open");
+			$(".header--bottom").removeClass("open");
 			$("body").css("overflow", "");
 		}
 	}

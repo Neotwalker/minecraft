@@ -66,7 +66,8 @@ body
 			span
 				opacity: 0.8
 	img
-		width: 190px
+		max-width: 190px
+		width: 100%
 		max-height: 70px
 		height: 100%
 
@@ -151,6 +152,7 @@ a, input
 		font-size: 24px
 		height: 50px
 		margin: 30px 0
+		padding: 12px 10px
 	&--send
 		touch-action: manipulation
 		user-select: none
@@ -195,6 +197,7 @@ a, input
 	&--top
 		margin-bottom: 15px
 		display: flex
+		gap: 10px
 		align-items: center
 		justify-content: space-between
 		.wrapper
@@ -251,85 +254,6 @@ a, input
 					white-space: nowrap
 					&:hover
 						opacity: 0.8
-	&--mobile
-		position: fixed
-		left: -100%
-		transition: left 0s linear .2s,opacity .2s linear .2s,visibility 0s .4s
-		z-index: 2
-		background-color: transparent
-		margin-top: 80px
-		top: 0
-		opacity: 0
-		visibility: hidden
-		.background-menu
-			width: 100%
-			height: 100%
-			z-index: 1
-			position: absolute
-			left: 0
-			top: 0
-		&.open
-			opacity: 1
-			visibility: visible
-			width: 100%
-			height: 100%
-			top: 0
-			transition: left linear,opacity .2s linear,visibility
-			left: 0
-			background-color: rgba(0,0,0,.45)
-			.menu
-				overflow: auto
-				transform: translate3d(0,0,0)
-				transition: transform .3s .2s
-		.menu
-			z-index: 99
-			position: relative
-			padding: 30px 20px
-			background-color: $white
-			width: 346px
-			height: 100%
-			transform: translate3d(-100%,0,0)
-			transition: transform .3s
-			.list
-				display: flex
-				flex-direction: column
-				gap: 33px
-				&.left
-					margin-bottom: 33px
-				li
-					.icon
-						margin-left: 50px
-						&::before
-							content: ""
-							background-image: url(../img/new_terrain_menu.png)
-							width: 32px
-							height: 32px
-							position: absolute
-							left: 20px
-						&-download::before
-							background-position: -256px 0
-						&-mods::before
-							background-position: -64px 0
-						&-maps::before
-							background-position: -34px 0
-						&-textures::before
-							background-position: -128px 0
-						&-shaders::before
-							background-position: -320px 0
-						&-seeds::before
-							background-position: -352px 0
-						&-skins::before
-							background-position: -160px 0
-						&-servers::before
-							background-position: -420px 0
-						&-news::before
-							background-position: 0 0
-						&-soft::before
-							background-position: -192px 0
-						&-guides::before
-							background-position: -290px 0
-						&-other::before
-							background-position: -387px 0
 
 .social
 	display: flex
@@ -354,14 +278,7 @@ a, input
 		color: $white
 		display: inline-block
 		line-height: 1
-		&::before
-			content: ''
-			display: block
-			position: absolute
-			bottom: 0
-			width: 100%
-			background-color: $white
-			height: 1px
+		text-decoration: underline
 	&--title
 		display: flex
 		justify-content: space-between
@@ -432,6 +349,9 @@ a, input
 						text-decoration-thickness: 2px
 				.image
 					position: relative
+					img
+						min-width: 280px
+						height: 100%
 					.important
 						left: 20px
 						top: 20px
@@ -443,6 +363,7 @@ a, input
 						align-items: center
 				.texts
 					padding-top: 20px
+					padding-bottom: 10px
 					max-width: 440px
 					line-height: 1.45
 					.h2
@@ -583,23 +504,38 @@ a, input
 	.page
 		&_prev
 			left: 0
+			width: 70px
 		&_next
 			right: 0
+			width: 70px
+			.svg-icons
+				justify-content: end !important
 		&_next-prev
 			position: relative
 			height: 0
 			> span
 				position: absolute
-				top: 10px
+				top: 0
 				.svg-icons
 					-webkit-filter: invert(.1)
 					filter: invert(.1)
+					display: flex
+					align-items: center
+					justify-content: start
+					padding: 0
+					svg
+						padding: 0
 				*
 						display: block
-						width: 16px
-						height: 16px
+						width: 30px
+						height: 30px
+						padding-top: 5px
+						width: 100%
 				> span
 					opacity: .5
+				svg
+					width: 16px
+					height: 16px
 	.pages
 		padding: 0 55px
 		text-align: center
@@ -650,11 +586,11 @@ a, input
 
 .arrow-bottom
 	display: block
-	background-image: url("data:image/svg+xmlcharset=UTF-8,%3csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.8335 1.49992L7.70727 6.62614C7.31675 7.01667 6.68358 7.01667 6.29306 6.62614L1.16683 1.49992' stroke='%23292929' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.8333 1.49998L7.70703 6.62621C7.3165 7.01673 6.68334 7.01673 6.29281 6.62621L1.16659 1.49998' stroke='%23292929' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
 	background-repeat: no-repeat
 	background-size: contain
 	filter: invert(0)
-	height: 6px
+	height: 12px
 	width: 12px
 
 .footer
@@ -955,8 +891,9 @@ a, input
 				background-position: center
 				cursor: pointer
 			.tooltip 
-				position: relative 
-				display: inline-flex 
+				position: relative
+				display: inline-flex
+				width: fit-content
 				.tooltiptext 
 					visibility: hidden 
 					min-width: 140px 
@@ -1358,13 +1295,18 @@ label
 		.checkbox + span::after
 			display: block
 			position: absolute
-			content: "\2713"
+			content: ""
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 5L4 8L11 1' stroke='%23292929' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+			background-repeat: no-repeat
+			background-size: 13px
 			height: 20px
 			width: 20px
-			top: 1px
-			left: 0
+			top: 5px
+			left: 4px
 			visibility: hidden
 			text-align: center
+		.checkbox:checked + span::before
+			border: 2px solid #292929
 		.checkbox:checked + span::after
 			visibility: visible
 		span
