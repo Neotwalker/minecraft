@@ -174,6 +174,8 @@
 		&--description
 			font-size: 16px
 	.blog
+		.breadcrumbs
+			margin-bottom: 0
 		&--sidebar
 			max-width: calc(30% - 20px)
 			min-width: 250px
@@ -197,10 +199,29 @@
 							width: 307px
 		&.servers 
 			.blog--posts
+				gap: 20px
 				.server
 					flex: 100%
+	.button.download
+		margin: 20px 0
+	.single 
+		.blog
+			&--posts 
+				.shortstory
+					margin-bottom: 20px
+					&--base, &--related, &--image
+						margin-bottom: 20px
+	.servers
+		&--inner 
+			.main--info
+				.shortstory
+					&--image 
+						.mainstory 
+							.list
+								*
+									font-size: 18px
 
-/* Small Devices, Tablets */
+	/* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	.header
 		padding-bottom: 20px
@@ -580,7 +601,10 @@
 								margin-bottom: 0
 							.h1
 								font-size: 20px
-							.list 
+								border-bottom: none
+								padding-bottom: 0
+							.list
+								padding: 10px
 								li
 									margin-bottom: 20px
 									span
