@@ -4,6 +4,7 @@
 @import "fonts"
 @import "libs"
 @import "vars"
+@import "download"
 
 *
 	-webkit-box-sizing: border-box
@@ -307,6 +308,9 @@ input[type="search"]
 	&--description
 		font-size: 20px
 		line-height: 1.3
+		display: flex
+		flex-direction: column
+		gap: 10px
 		&.servers
 			display: flex
 			flex-direction: column
@@ -565,6 +569,7 @@ input[type="search"]
 										border-radius: 5px
 										color: $white
 	&.search
+		margin-bottom: 30px
 		.breadcrumbs
 			display: flex
 			flex-direction: column
@@ -604,11 +609,10 @@ input[type="search"]
 		padding: 20px
 		display: flex
 		flex-wrap: wrap
-		justify-content: space-between
 		gap: 23px
 		margin-bottom: 30px
 		.skin
-			max-width: calc(16.7% - 23px)
+			max-width: calc(17% - 23px)
 	.navigation
 		margin-top: 0
 	.skin
@@ -1101,19 +1105,6 @@ details summary::-webkit-details-marker
 						align-items: center
 						justify-content: space-between
 						margin-bottom: 20px
-					.slider
-						margin: 0 -14px
-						&--item
-							display: inline-block
-							padding: 0 14px
-							img
-								width: 100%
-							p
-								color: #b5b5b5
-								margin-top: 10px
-							&:hover
-								p
-									opacity: 0.8
 				&--download
 					display: inline-flex
 					align-items: center
@@ -1413,6 +1404,45 @@ details summary::-webkit-details-marker
 		&-text
 			letter-spacing: 0.05em
 
+.slider
+	margin: 0 -14px
+	&--item
+		display: inline-block
+		padding: 0 14px
+		img
+			width: 100%
+		p
+			color: #b5b5b5
+			margin-top: 10px
+		&:hover
+			p
+				opacity: 0.8
+	&--versions
+		.slick-track
+			display: flex
+			align-items: center
+		.item
+			white-space: nowrap
+			a
+				display: block
+				padding: 10px
+				color: $white
+				font-weight: 500
+				&.active
+					font-weight: 500
+					border: 1px solid $white
+					border-radius: 5px
+					text-decoration: underline
+
+.posts
+	&--wrapper
+		display: flex
+		gap: 20px
+		flex-wrap: wrap
+		width: 100%
+		.shortstory
+			width: 100%
+
 .flex.middle.center
 	justify-content: center
 	display: flex
@@ -1433,6 +1463,12 @@ details summary::-webkit-details-marker
 		&:hover
 			path
 				stroke: $accent
+	.version
+		&--prev, &--next
+			&:hover
+				path
+					stroke: $white
+					opacity: 0.8
 
 .dcomments
 	background: #fff
@@ -1811,5 +1847,42 @@ form
 			padding: 10px 20px
 			z-index: 9
 
+.politic
+	margin-bottom: 30px
+	&--wrapper
+		background-color: $white
+		padding: 20px
+		.speedbar
+			margin-bottom: 20px
+		.h1
+			font-size: 32px
+			padding-bottom: 20px
+			margin-bottom: 20px
+			border-bottom: 1px solid #dedede
+			text-align: center
+		.texts
+			*
+				font-size: 20px
+				margin-bottom: 20px
+			h2
+				font-size: 24px
+			ul
+				margin-top: -20px
+			li
+				margin-bottom: 0
+			a
+				color: #337ab7
+
+.versions
+	padding: 20px
+	background-color: $accent
+	color: $white
+	.title
+		margin-bottom: 20px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.h2
+			font-size: 20px
 
 @import "media"

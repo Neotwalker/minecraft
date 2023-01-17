@@ -163,8 +163,6 @@
 	.skins
 		&--base
 			gap: 20px
-			.skin
-				max-width: calc(20% - 20px)
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 1000px)
@@ -213,6 +211,9 @@
 						max-width: calc(74% - 10px)
 					.bbcodes
 						max-width: calc(26% - 10px)
+		&--navigation
+			.sort--news
+				margin-bottom: 20px
 	.button.download
 		margin: 20px 0
 	.single 
@@ -233,6 +234,19 @@
 									font-size: 18px
 	.welcome
 		padding: 30px
+	.skins
+		&--categories
+			margin-bottom: 0
+		&--base
+			justify-content: flex-start
+			margin-bottom: 0
+			.skin
+				max-width: calc(17% - 20px)
+		.navigation
+			margin-bottom: 25px
+	.navigation
+		margin: 20px 0
+		margin-top: 0
 
 	/* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -324,6 +338,10 @@
 				flex-wrap: nowrap
 				overflow: auto
 				gap: 10px
+		&--base
+			margin-bottom: 0
+		.navigation
+			margin-bottom: 0
 	.footer
 		&--wrapper
 			flex-wrap: wrap
@@ -340,6 +358,10 @@
 					&--base
 						.h1
 							font-size: 24px
+	.politic, .servers
+		margin-bottom: 20px
+		.blog--sidebar .help
+			margin-bottom: 0
 
 @media only screen and (max-width : 612px)
 	.blog
@@ -483,6 +505,8 @@
 					margin-bottom: 0
 			.button.download
 				padding: 10px 20px
+		&--categories
+			margin-bottom: 0
 	details 
 		summary
 			font-size: 20px
@@ -507,6 +531,21 @@
 		display: flex
 		align-items: center
 		justify-content: center
+	.politic
+		&--wrapper
+			.h1
+				font-size: 24px
+				text-align: left
+			.texts
+				*
+					margin-bottom: 10px
+					font-size: 16px
+				ul
+					margin-top: 0
+				h2
+					font-size: 20px
+					margin-bottom: 5px
+					margin-top: 20px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
