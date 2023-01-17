@@ -117,9 +117,9 @@ $(function() {
 		})
 	}
 
-	if (document.querySelector('ul.sort') && document.getElementById("sort--news") ) {
+	if (document.querySelector('ul.sort') && document.querySelector(".sort--news") ) {
 		const opened_sort = document.querySelectorAll('ul.sort')[0];
-		const sort = document.getElementById("sort--news");
+		const sort = document.querySelector(".sort--news");
 		sort.addEventListener("click", function (e) {
 			opened_sort.classList.toggle("open");
 			e.stopPropagation();

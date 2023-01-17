@@ -327,6 +327,7 @@
 					z-index: 9
 				&--news
 					position: relative
+					cursor: pointer
 					&__mobile
 						display: flex
 						align-items: center
@@ -410,7 +411,15 @@
 				font-size: 16px
 				&::before
 					top: 6px
-
+	.footer
+		padding-bottom: 20px
+		&--info
+			padding: 20px 0
+		&--wrapper
+			margin-bottom: 0
+		&--bottom
+			.list
+				padding-top: 20px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -441,7 +450,6 @@
 	.footer
 		&--wrapper
 			gap: 20px
-			margin-bottom: 20px
 			.text
 				font-size: 16px
 		&--bottom
