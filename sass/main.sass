@@ -496,7 +496,8 @@ a, input
 									display: inline-flex
 									align-items: center
 									gap: 7px
-									min-width: 70px
+									max-width: 100px
+									width: 100%
 									&::before
 										width: 24px
 										height: 24px
@@ -876,7 +877,7 @@ details
 			right: 0
 			width: 70px
 			.svg-icons
-				justify-content: end !important
+				justify-content: flex-end !important
 		&_next-prev
 			position: relative
 			height: 0
@@ -888,7 +889,7 @@ details
 					filter: invert(.1)
 					display: flex
 					align-items: center
-					justify-content: start
+					justify-content: flex-start
 					padding: 0
 					svg
 						padding: 0
@@ -1349,6 +1350,9 @@ details
 		max-width: 370px
 		&-icon
 			margin-top: 2px
+			svg
+				width: 25px
+				height: auto
 		&.show
 			transform: translate(0,0)
 			bottom: 30px
@@ -1359,6 +1363,8 @@ details
 			box-shadow: 0 0 6px rgba(0, 0, 0, 26%)
 			padding: 10px 14px
 			border-radius: 10px
+			*
+				line-height: 1
 			button
 				font-weight: bold
 				text-transform: uppercase
@@ -1372,6 +1378,8 @@ details
 				border: 0
 				img
 					margin: 0
+		&-text
+			letter-spacing: 0.05em
 
 .flex.middle.center
 	justify-content: center
@@ -1514,7 +1522,7 @@ details
 		gap: 20px
 		flex-basis: 50%
 		max-width: 50%
-		justify-content: end
+		justify-content: flex-end
 		float: right
 		display: flex
 		align-items: center
@@ -1739,6 +1747,8 @@ form
 		display: flex
 		gap: 5px
 		align-items: center
+		.head
+			font-size: 18px
 		.arrows--prev
 			background-image: url('data:image/svg+xml,\
 			<svg width="16" height="12" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">\

@@ -103,9 +103,12 @@ $(function() {
 				let el = document.querySelector("#thisElement");
 				let inViewport = elementInViewport(el);
 				if (inViewport){
-					$('.goto-files').removeClass('show')
+					$('.goto-files').removeClass('show');
 				} else {
 					$('.goto-files').addClass('show');
+				}
+				if( window.scrollY + 1 >= document.documentElement.scrollHeight - document.documentElement.clientHeight){
+					$('.goto-files').removeClass('show');
 				}
 		})
 	
