@@ -70,30 +70,41 @@ $(function() {
 	});
 
 	$('.slider--versions').slick({
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 4,
-		variableWidth: true,
+		infinite: false,
+		slidesToShow: 12,
+		slidesToScroll: 2,
+		// variableWidth: true,
 		arrows: true,
 		appendArrows:'.slider--arrows',
 		prevArrow: '<div class="arrows--prev version--prev"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 15L2.20711 8.70711C1.81658 8.31658 1.81658 7.68342 2.20711 7.29289L8.5 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
 		nextArrow: '<div class="arrows--next version--prev"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 1L7.79289 7.29289C8.18342 7.68342 8.18342 8.31658 7.79289 8.70711L1.5 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
 		responsive: [
 			{
+				breakpoint: 1080,
+				settings: {
+					slidesToShow: 10,
+					slidesToScroll: 2,
+				}
+			},
+			{
 				breakpoint: 1024,
 				settings: {
-					variableWidth: true,
-					slidesToShow: 1,
+					slidesToShow: 8,
 					slidesToScroll: 2,
-					infinite: true,
 				}
 			},
 			{
 				breakpoint: 500,
 				settings: {
-					slidesToShow: 1,
+					slidesToShow: 6,
 					slidesToScroll: 2,
-					infinite: true,
+				}
+			},
+			{
+				breakpoint: 370,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 2,
 				}
 			},
 		]
@@ -101,10 +112,9 @@ $(function() {
 
 	if ($(window).width() <= 1000){
 		$('.slider--format').slick({
-			infinite: true,
-			slidesToShow: 1,
-			slidesToScroll: 5,
-			variableWidth: true,
+			infinite: false,
+			slidesToShow: 8,
+			slidesToScroll: 1,
 			arrows: true,
 			appendArrows:'.format--arrows',
 			prevArrow: '<div class="arrows--prev format--prev"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 15L2.20711 8.70711C1.81658 8.31658 1.81658 7.68342 2.20711 7.29289L8.5 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
@@ -113,17 +123,22 @@ $(function() {
 				{
 					breakpoint: 1024,
 					settings: {
-						slidesToShow: 1,
-						slidesToScroll: 2,
-						infinite: true,
+						slidesToShow: 6,
+						slidesToScroll: 1,
 					}
 				},
 				{
-					breakpoint: 500,
+					breakpoint: 540,
 					settings: {
-						slidesToShow: 1,
-						slidesToScroll: 3,
-						infinite: true,
+						slidesToShow: 5,
+						slidesToScroll: 2,
+					}
+				},
+				{
+					breakpoint: 370,
+					settings: {
+						slidesToShow: 4,
+						slidesToScroll: 1,
 					}
 				},
 			]

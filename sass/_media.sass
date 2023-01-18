@@ -11,6 +11,13 @@
 		&--sidebar
 			max-width: 306px
 			width: 100%
+	.slider
+		&--versions
+			.slick-track
+				gap: 0 
+			.item
+				&:nth-child(2)
+					min-width: fit-content
 
 @media only screen and (max-width : 1200px)
 	.main
@@ -299,10 +306,6 @@
 				white-space: wrap
 				display: flex
 				gap: 10px
-				.slick-track
-					margin: 0 -5px
-				.item
-					padding: 0 5px
 	.mcpe 
 		.info.first, .downloads--fast,
 		.updated
@@ -326,6 +329,8 @@
 			> li 
 				> .comments-tree-list li
 					padding-top: 20px
+	.title_spoiler
+		font-size: 18px
 
 @media only screen and (max-width : 930px)
 	.blog
@@ -465,6 +470,8 @@
 			.item
 				a
 					font-size: 16px
+			.slick-track
+				gap: 0
 	.versions
 		&.bg-red
 			.wrapper
