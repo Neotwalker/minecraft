@@ -1503,13 +1503,19 @@ details summary::-webkit-details-marker
 							stroke: $accent
 		.slider
 			&--versions
+				.slick-track
+					display: block
 				.item
+					margin-right: 10px
+					&:nth-child(2)
+						min-width: fit-content
 					a
 						border: 1px solid #dedede
 						border-radius: 5px
 						color: #292929
 						display: flex
 						align-items: center
+						justify-content: center
 						gap: 5px
 						&.active
 							text-decoration: none
@@ -1525,7 +1531,6 @@ details summary::-webkit-details-marker
 	height: 16px
 	display: inline-block
 	vertical-align: text-top
-	margin-right: 4px
 	&.wild
 		background-position: -130px -16px
 	&.cavesp2
@@ -1992,13 +1997,12 @@ form
 		.head
 			font-size: 18px
 		.arrows--prev
-			background-image: url('data:image/svg+xml,\
-			<svg width="16" height="12" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">\
-				<path d="M17 7.5H1M1 7.5L7 1.5M1 7.5L7 13.5" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>\
-			</svg>')
+			background-image: url('../img/down.svg')
 			filter: invert(0)
 			background-repeat: no-repeat
 			background-position: center
+			background-size: 100%
+			width: 24px
 			transform: rotate(-90deg)
 	.sort
 		display: none
