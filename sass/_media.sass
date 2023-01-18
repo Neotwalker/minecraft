@@ -586,8 +586,8 @@
 							margin-bottom: 20px
 							padding-bottom: 12px
 							margin-top: 13px
-						.h1
-							font-size: 20px
+						h1
+							font-size: 24px
 		&--navigation
 			ul
 				li
@@ -715,15 +715,23 @@
 				text-align: left
 	.single
 		.main--info
+			font-size: 18px
 			.seed
 				font-size: 18px
 				#myInput
 					font-size: 18px
 					max-width: 220px
 					display: inline-block
+			ul li
+				font-size: 16px
+				&::before
+					top: 4px
 		.blog
 			.social
 				margin-top: 10px
+				.ya-share2__title
+					font-size: 14px
+					line-height: 1.8
 			&--posts 
 				.mobile
 					display: flex
@@ -751,6 +759,11 @@
 							margin-bottom: 13px
 							a, span
 								font-size: 14px
+					&--related
+						.slider
+							margin: 0
+							&--item
+								padding: 0
 	#dle-comments-list 
 		> .comments-tree-list 
 			> li 
