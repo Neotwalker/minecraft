@@ -163,6 +163,37 @@
 	.skins
 		&--base
 			gap: 20px
+	.mcpe
+		.downloads
+			flex-direction: column
+			.download
+				max-width: 100%
+				&:last-child
+					max-width: 100%
+					padding: 15px
+					.icon, .texts p
+						display: block
+				.button
+					&.windows
+						background: #00ADEF
+						padding: 10px
+						height: 45px
+						max-width: 76px
+						width: 100%
+						border-radius: 10px
+						path
+							fill: $white
+		.updated
+			.list
+				flex-direction: column
+				gap: 10px
+				.item
+					justify-content: space-between
+
+
+@media only screen and (max-width : 1075px)
+	.blog--posts
+		max-width: calc(72% - 20px)
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 1000px)
@@ -196,6 +227,7 @@
 						img
 							width: 307px
 		&.servers 
+			margin-bottom: 20px
 			.blog--posts
 				gap: 20px
 				.server
@@ -214,9 +246,21 @@
 		&--navigation
 			.sort--news
 				margin-bottom: 20px
+		&.mcpe
+			margin-top: 20px
+			.navigation
+				margin-top: 0
+		&.index, &.textures, &.skins
+			.navigation
+				margin-bottom: 0
+		&.skins
+			.navigation
+				margin-top: 20px
 	.button.download
 		margin: 20px 0
-	.single 
+	.single
+		.main--info img
+			margin-bottom: 20px
 		.blog
 			&--posts 
 				.shortstory
@@ -247,8 +291,50 @@
 	.navigation
 		margin: 20px 0
 		margin-top: 0
+	.versions
+		margin-bottom: 0
+		&.bg-red
+			.wrapper
+				display: block
+				white-space: wrap
+				display: flex
+				gap: 10px
+				.slick-track
+					margin: 0 -5px
+				.item
+					padding: 0 5px
+	.mcpe 
+		.info.first, .downloads--fast,
+		.updated
+				margin-bottom: 0
+	.comments-tree-item
+		padding-top: 20px
+	#dle-comments-list 
+		> .comments-tree-list 
+			> li 
+				> .comments-tree-list li ol li
+					padding-top: 10px
+	.com-footer
+			.actions
+				.reply
+					span
+						font-size: 18px
+	.comments-tree-list > li > ol > li .comment
+		padding-bottom: 10px
+	#dle-comments-list 
+		> .comments-tree-list 
+			> li 
+				> .comments-tree-list li
+					padding-top: 20px
 
-	/* Small Devices, Tablets */
+@media only screen and (max-width : 930px)
+	.blog
+		&--sidebar
+			max-width: 300px
+		&--posts
+			max-width: calc(66% - 20px)
+
+/* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	.header
 		padding-bottom: 20px
@@ -332,12 +418,24 @@
 			.blog--posts
 				flex-direction: row
 				gap: 20px
+		.breadcrumbs
+			&.info
+				.h2
+					font-size: 20px
+				p
+					font-size: 18px
+					line-height: 23px
+		&.mcpe
+			.navigation
+				margin-bottom: 0
 	.skins
 		&--categories
 			.row
 				flex-wrap: nowrap
 				overflow: auto
 				gap: 10px
+				a
+					font-size: 18px
 		&--base
 			margin-bottom: 0
 		.navigation
@@ -362,6 +460,17 @@
 		margin-bottom: 20px
 		.blog--sidebar .help
 			margin-bottom: 0
+	.slider
+		&--versions
+			.item
+				a
+					font-size: 16px
+	.versions
+		&.bg-red
+			.wrapper
+				a
+					font-size: 16px
+
 
 @media only screen and (max-width : 612px)
 	.blog
@@ -546,6 +655,13 @@
 					font-size: 20px
 					margin-bottom: 5px
 					margin-top: 20px
+	form 
+		.sort
+			li
+				a
+					font-size: 16px
+			&.open
+				top: 53px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -709,11 +825,35 @@
 							font-size: 18px
 						.scroll img
 							max-width: 285px
+							width: fit-content
 	form
+		.sort
+			min-width: 288px
 		#news-sort
 			.head
 				font-size: 16px
-
+	.mcpe 
+		.info.first
+			padding: 10px
+			.h2
+				font-size: 20px
+			p
+				font-size: 18px
+		.updated
+			.list
+				.item
+					flex-wrap: wrap
+					gap: 15px
+					.texts
+						p
+							white-space: nowrap
+							font-size: 18px
+	#dle-comments-list 
+		> .comments-tree-list 
+			> li 
+				> .comments-tree-list li ol li
+					padding-left: 0
+	
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 380px)
 	.header
@@ -803,11 +943,24 @@
 										#myInput2
 											max-width: 55px
 	.skins
+		&--categories
+			padding: 20px 10px
 		&--base
 			gap: 20px
 			.skin
 				max-width: calc(53% - 20px)
-/*==========  Mobile First  ==========*/
+	.mcpe
+		.updated
+			.list
+				.item
+					flex-direction: column
+					align-items: flex-start
+					a.blue
+						max-width: 100%
+	.versions
+		padding: 10px
+
+	/*==========  Mobile First  ==========*/
 
 @media only screen and (max-width : 320px)
 	.servers
