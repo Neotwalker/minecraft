@@ -227,6 +227,7 @@
 			max-width: calc(72% - 20px)
 			.shortstory
 				.mainstory
+					gap: 20px
 					line-height: 0.8
 					.texts p
 						font-size: 16px
@@ -292,7 +293,8 @@
 			justify-content: flex-start
 			margin-bottom: 0
 			.skin
-				max-width: calc(17% - 20px)
+				max-width: calc(18% - 20px)
+				flex: 1 1 calc(17% - 20px)
 		.navigation
 			margin-bottom: 25px
 	.navigation
@@ -302,10 +304,8 @@
 		margin-bottom: 0
 		&.bg-red
 			.wrapper
-				display: block
-				white-space: wrap
 				display: flex
-				gap: 10px
+				overflow: hidden
 	.mcpe 
 		.info.first, .downloads--fast,
 		.updated
@@ -338,6 +338,15 @@
 			max-width: 300px
 		&--posts
 			max-width: calc(66% - 20px)
+			.shortstory
+				.mainstory
+					.image img
+						min-width: 240px
+	.skins
+		&--base
+			.skin
+				flex: 1 1 calc(25% - 20px)
+				max-width: calc(26% - 20px)
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -443,6 +452,9 @@
 					font-size: 18px
 		&--base
 			margin-bottom: 0
+			.skin
+				flex: 1 1 calc(17% - 20px)
+				max-width: calc(18% - 20px)
 		.navigation
 			margin-bottom: 0
 	.footer
@@ -461,7 +473,7 @@
 					&--base
 						.h1
 							font-size: 24px
-	.politic, .servers
+	.base, .servers
 		margin-bottom: 20px
 		.blog--sidebar .help
 			margin-bottom: 0
@@ -613,7 +625,8 @@
 		&--base
 			gap: 20px
 			.skin
-				max-width: calc(33.3333% - 20px)
+				flex: calc(25% - 20px)
+				max-width: calc(26% - 20px)
 		.skin
 			.main
 				&__image
@@ -647,7 +660,7 @@
 		display: flex
 		align-items: center
 		justify-content: center
-	.politic
+	.base
 		&--wrapper
 			.h1
 				font-size: 24px
@@ -669,6 +682,17 @@
 					font-size: 16px
 			&.open
 				top: 53px
+	.slider
+		&--versions
+			.owl-stage
+				.owl-item
+					&:first-child
+						max-width: 50px
+	.versions.bg-red .wrapper
+		.owl-stage
+				.owl-item
+					&:first-child
+						max-width: 50px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -801,6 +825,13 @@
 			a
 				&:nth-child(3), &:nth-child(4), &:nth-child(5)
 					display: none
+	.skins
+		&--base
+			.skin
+				flex: calc(33% - 20px)
+				max-width: calc(34% - 20px)
+				img
+					width: 100%
 	.single
 		.goto-files
 			left: 0
@@ -864,6 +895,8 @@
 				.item
 					flex-wrap: wrap
 					gap: 15px
+					a.blue
+						max-width: 100%
 					.texts
 						p
 							white-space: nowrap
@@ -873,7 +906,12 @@
 			> li 
 				> .comments-tree-list li ol li
 					padding-left: 0
-	
+	.slider
+		&--versions
+			.item
+				a
+					padding: 0
+
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 380px)
 	.header
@@ -968,18 +1006,29 @@
 		&--base
 			gap: 20px
 			.skin
-				max-width: calc(53% - 20px)
+				flex: calc(50% - 20px)
+				max-width: calc(55% - 20px)
 	.mcpe
 		.updated
 			.list
 				.item
 					flex-direction: column
 					align-items: flex-start
-					a.blue
-						max-width: 100%
 	.versions
 		padding: 10px
-
+	.slider
+		&--versions
+			.owl-stage
+				.owl-item
+					max-width: 80px
+					&:first-child
+						max-width: fit-content
+	.versions.bg-red .wrapper
+		.owl-stage
+				.owl-item
+					max-width: 80px
+					&:first-child
+						max-width: fit-content
 	/*==========  Mobile First  ==========*/
 
 @media only screen and (max-width : 320px)

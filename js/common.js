@@ -41,150 +41,255 @@ $(function() {
 		$(this).hide();
 	});
 
-	$('.slider').slick({
-		infinite: true,
-		slidesToShow: 3,
-		slidesToScroll: 3,
-		arrows: true,
-		appendArrows:'.slider--arrows',
-		prevArrow: '<div class="arrows--prev"><svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 7.5H1M1 7.5L7 1.5M1 7.5L7 13.5" stroke="#B5B5B5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>',
-		nextArrow: '<div class="arrows--next"><svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.5L17 7.5M17 7.5L11 13.5M17 7.5L11 1.5" stroke="#B5B5B5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>',
-		responsive: [
-			{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
-					infinite: true,
-				}
+	$('.slider').owlCarousel({
+		navContainer: $('.arrows'),
+		dots: false,
+		smartSpeed: 700,
+		margin: 28,
+		rewind: true,
+		navText: [
+			'<div class="arrows--prev"><svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 7.5H1M1 7.5L7 1.5M1 7.5L7 13.5" stroke="#B5B5B5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>',
+			'<div class="arrows--next"><svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.5L17 7.5M17 7.5L11 13.5M17 7.5L11 1.5" stroke="#B5B5B5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>'
+		],
+		responsive: {
+			0: {
+				items: 1
 			},
-			{
-				breakpoint: 500,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					infinite: true,
-				}
+			500: {
+				items: 2
 			},
-		]
+			1000: {
+				items: 3
+			}
+		}
 	});
-
-	$('.slider--versions').slick({
-		infinite: false,
-		slidesToShow: 10,
-		slidesToScroll: 2,
-		// variableWidth: true,
-		arrows: true,
-		appendArrows:'.slider--arrows',
-		prevArrow: '<div class="arrows--prev version--prev"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 15L2.20711 8.70711C1.81658 8.31658 1.81658 7.68342 2.20711 7.29289L8.5 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
-		nextArrow: '<div class="arrows--next version--prev"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 1L7.79289 7.29289C8.18342 7.68342 8.18342 8.31658 7.79289 8.70711L1.5 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
-		responsive: [
-			{
-				breakpoint: 1250,
-				settings: {
-					slidesToShow: 9,
-					slidesToScroll: 2,
-				}
+	
+	$('.slider--versions').owlCarousel({
+		navContainer: $('.slider--arrows'),
+		dots: false,
+		smartSpeed: 500,
+		items: 10,
+		checkVisible: true,
+		autoWidth: true,
+		margin: 10,
+		rewind: true,
+		navText: [
+			'<div class="arrows--prev version--prev"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 15L2.20711 8.70711C1.81658 8.31658 1.81658 7.68342 2.20711 7.29289L8.5 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
+			'<div class="arrows--next version--prev"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 1L7.79289 7.29289C8.18342 7.68342 8.18342 8.31658 7.79289 8.70711L1.5 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>'
+		],
+		responsive: {
+			0: {
+				autoWidth: false,
+				items: 4,
+				margin: 15,
 			},
-			{
-				breakpoint: 1150,
-				settings: {
-					slidesToShow: 8,
-					slidesToScroll: 2,
-				}
+			480: {
+				autoWidth: false,
+				items: 5
 			},
-			{
-				breakpoint: 1080,
-				settings: {
-					slidesToShow: 7,
-					slidesToScroll: 2,
-				}
+			600: {
+				items: 7
 			},
-			{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 6,
-					slidesToScroll: 2,
-				}
+			768: {
+				items: 4,
+				autoWidth: false,
 			},
-			{
-				breakpoint: 900,
-				settings: {
-					slidesToShow: 5,
-					slidesToScroll: 2,
-				}
+			820: {
+				items: 5,
+				autoWidth: false,
 			},
-			{
-				breakpoint: 800,
-				settings: {
-					slidesToShow: 5,
-					slidesToScroll: 2,
-				}
-			},
-			{
-				breakpoint: 700,
-				settings: {
-					slidesToShow: 6,
-					slidesToScroll: 2,
-				}
-			},
-			{
-				breakpoint: 600,
-				settings: {
-					slidesToShow: 5,
-					slidesToScroll: 2,
-				}
-			},
-			{
-				breakpoint: 500,
-				settings: {
-					slidesToShow: 4,
-					slidesToScroll: 2,
-				}
-			},
-			{
-				breakpoint: 370,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 2,
-				}
-			},
-		]
+			1000: {
+				items: 6,
+				autoWidth: true,
+			}
+		}
 	});
 
 	if ($(window).width() <= 1000){
-		$('.slider--format').slick({
-			infinite: false,
-			slidesToShow: 8,
-			slidesToScroll: 1,
-			arrows: true,
-			appendArrows:'.format--arrows',
-			prevArrow: '<div class="arrows--prev format--prev"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 15L2.20711 8.70711C1.81658 8.31658 1.81658 7.68342 2.20711 7.29289L8.5 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
-			nextArrow: '<div class="arrows--next format--prev"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 1L7.79289 7.29289C8.18342 7.68342 8.18342 8.31658 7.79289 8.70711L1.5 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
-			responsive: [
-				{
-					breakpoint: 1024,
-					settings: {
-						slidesToShow: 6,
-						slidesToScroll: 1,
-					}
+		$('.slider--format').owlCarousel({
+			navContainer: $('.format--arrows'),
+			dots: false,
+			smartSpeed: 700,
+			autoWidth: true,
+			rewind: true,
+			margin: 10,
+			navText: [
+				'<div class="arrows--prev version--prev"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 15L2.20711 8.70711C1.81658 8.31658 1.81658 7.68342 2.20711 7.29289L8.5 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
+				'<div class="arrows--next version--prev"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 1L7.79289 7.29289C8.18342 7.68342 8.18342 8.31658 7.79289 8.70711L1.5 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>'
+			],
+			responsive: {
+				0: {
+					autoWidth: false,
+					items: 5,
+					margin: 15,
 				},
-				{
-					breakpoint: 540,
-					settings: {
-						slidesToShow: 5,
-						slidesToScroll: 2,
-					}
+				480: {
+					autoWidth: false,
+					items: 5
 				},
-				{
-					breakpoint: 370,
-					settings: {
-						slidesToShow: 4,
-						slidesToScroll: 1,
-					}
+				600: {
+					items: 7
 				},
-			]
-		});
+				768: {
+					items: 4,
+					autoWidth: false,
+				},
+				820: {
+					items: 5,
+					autoWidth: false,
+				},
+				1000: {
+					items: 6,
+					autoWidth: false,
+				}
+			}
+		})
+	}
+
+	// $('.slider').slick({
+		// 	infinite: true,
+		// 	slidesToShow: 3,
+		// 	slidesToScroll: 3,
+		// 	arrows: true,
+		// 	appendArrows:'.slider--arrows',
+		// 	prevArrow: '<div class="arrows--prev"><svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 7.5H1M1 7.5L7 1.5M1 7.5L7 13.5" stroke="#B5B5B5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>',
+		// 	nextArrow: '<div class="arrows--next"><svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.5L17 7.5M17 7.5L11 13.5M17 7.5L11 1.5" stroke="#B5B5B5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>',
+		// 	responsive: [
+		// 		{
+		// 			breakpoint: 1024,
+		// 			settings: {
+		// 				slidesToShow: 2,
+		// 				slidesToScroll: 2,
+		// 				infinite: true,
+		// 			}
+		// 		},
+		// 		{
+		// 			breakpoint: 500,
+		// 			settings: {
+		// 				slidesToShow: 1,
+		// 				slidesToScroll: 1,
+		// 				infinite: true,
+		// 			}
+		// 		},
+		// 	]
+	// });
+
+	// $('.slider--versions').slick({
+		// 	infinite: false,
+		// 	slidesToShow: 10,
+		// 	slidesToScroll: 2,
+		// 	// variableWidth: true,
+		// 	arrows: true,
+		// 	appendArrows:'.slider--arrows',
+		// 	prevArrow: '<div class="arrows--prev version--prev"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 15L2.20711 8.70711C1.81658 8.31658 1.81658 7.68342 2.20711 7.29289L8.5 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
+		// 	nextArrow: '<div class="arrows--next version--prev"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 1L7.79289 7.29289C8.18342 7.68342 8.18342 8.31658 7.79289 8.70711L1.5 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
+		// 	responsive: [
+		// 		{
+		// 			breakpoint: 1250,
+		// 			settings: {
+		// 				slidesToShow: 9,
+		// 				slidesToScroll: 2,
+		// 			}
+		// 		},
+		// 		{
+		// 			breakpoint: 1150,
+		// 			settings: {
+		// 				slidesToShow: 8,
+		// 				slidesToScroll: 2,
+		// 			}
+		// 		},
+		// 		{
+		// 			breakpoint: 1080,
+		// 			settings: {
+		// 				slidesToShow: 7,
+		// 				slidesToScroll: 2,
+		// 			}
+		// 		},
+		// 		{
+		// 			breakpoint: 1024,
+		// 			settings: {
+		// 				slidesToShow: 6,
+		// 				slidesToScroll: 2,
+		// 			}
+		// 		},
+		// 		{
+		// 			breakpoint: 900,
+		// 			settings: {
+		// 				slidesToShow: 5,
+		// 				slidesToScroll: 2,
+		// 			}
+		// 		},
+		// 		{
+		// 			breakpoint: 800,
+		// 			settings: {
+		// 				slidesToShow: 5,
+		// 				slidesToScroll: 2,
+		// 			}
+		// 		},
+		// 		{
+		// 			breakpoint: 700,
+		// 			settings: {
+		// 				slidesToShow: 6,
+		// 				slidesToScroll: 2,
+		// 			}
+		// 		},
+		// 		{
+		// 			breakpoint: 600,
+		// 			settings: {
+		// 				slidesToShow: 5,
+		// 				slidesToScroll: 2,
+		// 			}
+		// 		},
+		// 		{
+		// 			breakpoint: 500,
+		// 			settings: {
+		// 				slidesToShow: 4,
+		// 				slidesToScroll: 2,
+		// 			}
+		// 		},
+		// 		{
+		// 			breakpoint: 370,
+		// 			settings: {
+		// 				slidesToShow: 3,
+		// 				slidesToScroll: 2,
+		// 			}
+		// 		},
+		// 	]
+	// });
+
+	if ($(window).width() <= 1000){
+		// $('.slider--format').slick({
+		// 	infinite: false,
+		// 	slidesToShow: 8,
+		// 	slidesToScroll: 1,
+		// 	arrows: true,
+		// 	appendArrows:'.format--arrows',
+		// 	prevArrow: '<div class="arrows--prev format--prev"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 15L2.20711 8.70711C1.81658 8.31658 1.81658 7.68342 2.20711 7.29289L8.5 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
+		// 	nextArrow: '<div class="arrows--next format--prev"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 1L7.79289 7.29289C8.18342 7.68342 8.18342 8.31658 7.79289 8.70711L1.5 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
+		// 	responsive: [
+		// 		{
+		// 			breakpoint: 1024,
+		// 			settings: {
+		// 				slidesToShow: 6,
+		// 				slidesToScroll: 1,
+		// 			}
+		// 		},
+		// 		{
+		// 			breakpoint: 540,
+		// 			settings: {
+		// 				slidesToShow: 5,
+		// 				slidesToScroll: 2,
+		// 			}
+		// 		},
+		// 		{
+		// 			breakpoint: 370,
+		// 			settings: {
+		// 				slidesToShow: 4,
+		// 				slidesToScroll: 1,
+		// 			}
+		// 		},
+		// 	]
+		// });
 	}
 
 	$('.smiles .icon').click(function(){
