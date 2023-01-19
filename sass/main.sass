@@ -735,90 +735,107 @@ details summary::-webkit-details-marker
 
 .servers
 	&--inner
-		.main--info
-			.shortstory
-				&--image
-					.mainstory
-						border-radius: 10px
-						background-color: $white
-						padding: 20px
-						display: flex
-						gap: 15px
-						flex-direction: column
-						.h1
-							padding-bottom: 15px
-							font-size: 32px
+		.shortstory
+			&--image
+				.mainstory
+					border-radius: 10px
+					background-color: $white
+					padding: 20px
+					display: flex
+					gap: 15px
+					flex-direction: column
+					.h1
+						padding-bottom: 15px
+						font-size: 32px
+						border-bottom: 1px solid #DEDEDE
+					.list
+						margin-bottom: 0
+						li
+							color: #292929
+							display: flex
+							align-items: center
+							font-size: 20px
+							padding-bottom: 10px
+							margin-bottom: 0 !important
 							border-bottom: 1px solid #DEDEDE
-						.list
-							li
-								display: flex
-								align-items: center
-								font-size: 20px
-								padding-bottom: 10px
-								margin-bottom: 25px
-								border-bottom: 1px solid #DEDEDE
-								line-height: 1.1
-								&:last-child
-									border-bottom: none
-									padding-bottom: 0
+							line-height: 1.1
+							padding-left: 0
+							&::before
+								display: none
+							&:last-child
+								border-bottom: none
+								padding-bottom: 0
+								margin-bottom: 0
+							.slots, .version
+								font-weight: bold
+								padding: 7px 10px
+								border-radius: 10px
+								color: $white
+							.slots
+								background-color: $accent
+							.version
+								background-color: #F0AD4E
+							ul
+								li
 									margin-bottom: 0
-								.slots, .version
-									font-weight: bold
-									padding: 7px 10px
-									border-radius: 10px
-									color: $white
-								.slots
-									background-color: $accent
-								.version
-									background-color: #F0AD4E
-								ul
-									li
-										margin-bottom: 0
-										padding-bottom: 0
-										border-bottom: none
-								p
+									padding-bottom: 0
+									border-bottom: none
+							p
+								font-weight: normal
+								max-width: 100%
+								a
 									font-weight: normal
-									max-width: 100%
-									a
-										font-weight: normal
-										color: #337AB7
+									color: #337AB7
+								img
+									margin-bottom: 0
+							span
+								padding: 0
+								padding-left: 30px
+								font-size: 18px
+								max-width: 190px
+								width: 100%
+								font-weight: bold
+								gap: 5px
+								position: relative
+								.icon
+									position: absolute
+									left: 0
+									display: inline-block
+									width: 20px
+									height: 20px
 									img
 										margin-bottom: 0
-								span
-									font-size: 18px
-									max-width: 190px
-									width: 100%
+							.copy
+								margin-bottom: 0
+								align-items: center
+								button
+									background-image: url('data:image/svg+xmlcharset=utf-8,\
+									<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">\
+										<path d="M6.33398 8.83332C6.33398 7.17646 7.67713 5.83331 9.33398 5.83331H15.0006C16.6575 5.83331 18.0007 7.17646 18.0007 8.83331V14.5C18.0007 16.1568 16.6575 17.5 15.0007 17.5H9.33399C7.67713 17.5 6.33398 16.1568 6.33398 14.5V8.83332Z" stroke="#292929" stroke-linecap="round" stroke-linejoin="round"/>\
+										<path d="M14.666 2.50002L5.99935 2.50002C4.3425 2.50002 2.99935 3.84317 2.99935 5.50002L2.99935 14.1667" stroke="#292929" stroke-linecap="round" stroke-linejoin="round"/>\
+										</svg>')
+								#myInput, #myInput1, #myInput2
+									max-width: 155px
+									color: #292929
 									font-weight: bold
+							&:nth-child(2)
 								.copy
-									margin-bottom: 0
-									align-items: center
-									button
-										background-image: url('data:image/svg+xmlcharset=utf-8,\
-										<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">\
-											<path d="M6.33398 8.83332C6.33398 7.17646 7.67713 5.83331 9.33398 5.83331H15.0006C16.6575 5.83331 18.0007 7.17646 18.0007 8.83331V14.5C18.0007 16.1568 16.6575 17.5 15.0007 17.5H9.33399C7.67713 17.5 6.33398 16.1568 6.33398 14.5V8.83332Z" stroke="#292929" stroke-linecap="round" stroke-linejoin="round"/>\
-											<path d="M14.666 2.50002L5.99935 2.50002C4.3425 2.50002 2.99935 3.84317 2.99935 5.50002L2.99935 14.1667" stroke="#292929" stroke-linecap="round" stroke-linejoin="round"/>\
-											</svg>')
-									#myInput, #myInput1, #myInput2
-										max-width: 155px
-										color: #292929
-										font-weight: bold
-								&:nth-child(2)
-									.copy
-										#myInput2
-											max-width: 70px
-								&:nth-child(3)
-									p
-										font-weight: bold
-				&--base
-					.info
-						border-bottom: 1px solid #DEDEDE
-						padding-bottom: 20px
-						margin-bottom: 20px
+									#myInput2
+										max-width: 70px
+							&:nth-child(3)
+								p
+									font-weight: bold
+			&--base
+				.info
+					border-bottom: 1px solid #DEDEDE
+					padding-bottom: 20px
+					margin-bottom: 20px
+				.main--info
 					ul
 						li
 							color: #292929
-					img
-						margin-bottom: 20px
+					a
+						color: #337ab7
 					.scroll
 						display: flex
 						overflow-x: auto
@@ -844,15 +861,19 @@ details summary::-webkit-details-marker
 
 .unit-rating
 	z-index: 0
-	margin: 0
+	margin: 0 !important
 	padding: 0
 	position: relative
 	background-position: 0 -46px
+	flex-direction: initial !important
+	display: block !important
 	li
-		text-indent: -90000px
-		padding: 0
-		margin: 0
-		float: left
+		text-indent: -90000px !important
+		padding: 0 !important
+		margin: 0 !important
+		float: left !important
+		display: block !important
+		position: absolute !important
 		a
 			display: block
 			width: 23px
@@ -1207,7 +1228,9 @@ details summary::-webkit-details-marker
 			margin-bottom: 20px
 		img
 			width: 100%
-			margin-bottom: 20px
+			display: block
+		a
+			color: #337ab7
 		ul
 			display: flex
 			flex-direction: column
@@ -1520,6 +1543,7 @@ details summary::-webkit-details-marker
 						align-items: center
 						justify-content: center
 						gap: 5px
+						padding: 10px
 						&.active
 							text-decoration: none
 							background-color: $accent
@@ -1672,6 +1696,7 @@ details summary::-webkit-details-marker
 		-ms-flex-pack: justify
 		justify-content: space-between
 	input.info, input.commentsreplyname, textarea
+		font-family: "roboto"
 		border-radius: 5px
 		padding: 10px
 		position: relative
@@ -1770,6 +1795,8 @@ details summary::-webkit-details-marker
 .form_submit
 	display: flex
 	flex-wrap: wrap
+	#dle-captcha
+		padding: 0 !important
 	.c-captcha
 		position: relative
 		gap: 20px
@@ -1780,7 +1807,7 @@ details summary::-webkit-details-marker
 		display: flex
 		align-items: center
 		img
-			margin-bottom: 0
+			margin-bottom: 0 !important
 			position: relative
 			display: block
 			object-fit: cover
@@ -1925,6 +1952,7 @@ input[name="sec_code"]::placeholder
 			display: flex
 			gap: 10px
 			.bbcodes
+				font-family: "roboto"
 				padding: 11px 57px
 				&.cancelchanges
 					border: 1px solid $accent
@@ -2114,7 +2142,11 @@ form
 	border-radius: 10px
 	border-bottom-left-radius: 0
 	border-bottom-right-radius: 0
+	display: flex
+	align-items: center
+	gap: 10px
 	a
+		color: #292929 !important
 		img
 			margin-bottom: 0 !important
 			width: fit-content !important

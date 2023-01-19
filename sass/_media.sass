@@ -269,8 +269,6 @@
 	.button.download
 		margin: 20px 0
 	.single
-		.main--info img
-			margin-bottom: 20px
 		.blog
 			&--posts 
 				.shortstory
@@ -354,6 +352,20 @@
 			.skin
 				flex: 1 1 calc(25% - 20px)
 				max-width: calc(26% - 20px)
+	.single .main--info .copy #myInput,
+	.single .main--info .seed #myInput
+		max-width: 215px
+	.form_submit
+		gap: 20px
+		.c-captcha,
+		.post-comments
+			flex-basis: 100%
+			max-width: 100%
+		.c-captcha
+			fload: left
+			justify-content: flex-start
+	.single .blog--posts .shortstory--base h1
+		font-size: 24px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -501,7 +513,22 @@
 			.wrapper
 				a
 					font-size: 16px
-
+	.form_submit
+		gap: 20px
+		justify-content: space-between
+		.c-captcha,
+		.post-comments
+			flex-basis: 50%
+			max-width: calc(50% - 20px)
+		.c-captcha
+			fload: left
+			justify-content: inherit
+			margin-left: auto
+			a
+				min-width: 88px
+		input[name=sec_code]
+			max-width: 70%
+			width: 100%
 
 @media only screen and (max-width : 612px)
 	.blog
@@ -631,6 +658,9 @@
 		.c-captcha
 			max-width: 100%
 			justify-content: start
+			margin-left: 0
+		input[name=sec_code]
+			max-width: 100%
 	input[name="sec_code"]
 		width: calc(100% - 88px)
 	.skins
@@ -756,10 +786,10 @@
 				font-size: 18px
 				#myInput
 					font-size: 18px
-					max-width: 220px
+					max-width: 195px
 					display: inline-block
 			ul li
-				font-size: 16px
+				font-size: 18px
 				&::before
 					top: 4px
 		.blog
@@ -867,9 +897,9 @@
 							.list
 								padding: 10px
 								li
-									margin-bottom: 20px
+									align-items: flex-start
 									span
-										max-width: 160px
+										max-width: 190px
 									p, div
 										max-width: 130px
 									*
@@ -925,7 +955,7 @@
 					padding: 0
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 380px)
+@media only screen and (max-width : 390px)
 	.header
 		&--mobile
 			&.open
@@ -1041,8 +1071,14 @@
 					max-width: 80px
 					&:first-child
 						max-width: fit-content
-	/*==========  Mobile First  ==========*/
+	.servers--inner .shortstory--image .mainstory .list li 
+		span
+			padding-left: 0
+			.icon
+				display: none
 
+
+	/*==========  Mobile First  ==========*/
 @media only screen and (max-width : 320px)
 	.servers
 		&--inner 
