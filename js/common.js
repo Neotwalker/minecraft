@@ -84,7 +84,7 @@ $(function() {
 				margin: 15,
 			},
 			480: {
-				autoWidth: false,
+				autoWidth: true,
 				items: 5
 			},
 			600: {
@@ -124,7 +124,7 @@ $(function() {
 					margin: 15,
 				},
 				480: {
-					autoWidth: false,
+					autoWidth: true,
 					items: 5
 				},
 				600: {
