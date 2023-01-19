@@ -254,6 +254,8 @@
 		&--navigation
 			.sort--news
 				margin-bottom: 20px
+				flex-wrap: wrap
+				margin-left: 0
 		&.mcpe
 			margin-top: 20px
 			.navigation
@@ -342,6 +344,11 @@
 				.mainstory
 					.image img
 						min-width: 240px
+					.texts
+						h2
+							line-height: 22px
+						p
+							-webkit-line-clamp: 3
 	.skins
 		&--base
 			.skin
@@ -423,7 +430,7 @@
 						padding-bottom: 20px
 					.image
 						img
-							width: 240px
+							width: 280px
 							height: 100%
 				&--base
 					.h1
@@ -442,6 +449,11 @@
 		&.mcpe, &.index
 			.navigation
 				margin-bottom: 0
+		&--navigation
+			.sort--news
+				margin-bottom: 20px
+				flex-wrap: nowrap
+				margin-left: auto
 	.skins
 		&--categories
 			.row
