@@ -123,7 +123,7 @@ $(function() {
 					items: 5,
 					margin: 15,
 				},
-				480: {
+				390: {
 					autoWidth: true,
 					items: 5
 				},
