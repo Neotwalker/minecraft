@@ -67,9 +67,9 @@ body
 			span
 				opacity: 0.8
 	img
-		max-width: 190px
+		max-width: 108px
 		width: 100%
-		max-height: 70px
+		max-height: 40px
 		height: 100%
 
 section, header
@@ -93,6 +93,10 @@ input, button, textarea
 a, input
 	&:hover
 		opacity: 0.8
+
+svg
+	width: 20px
+	height: 20px
 
 .img-responsive
 	display: block
@@ -187,9 +191,17 @@ a, input
 			flex: 1 0 auto
 			margin-top: 30px
 
+
+.theme
+	cursor: pointer
+	align-items: center
+	justify-content: center
+	.light-mode, .night-mode
+		display: flex
+	
 .header
 	position: relative
-	min-height: 171px
+	min-height: fit-content
 	background: $white
 	padding-top: 20px
 	padding-bottom: 30px
@@ -212,16 +224,16 @@ a, input
 			align-items: center
 			gap: 30px
 			.theme
-				cursor: pointer
+				border: 1px solid #B5B5B5
+				border-radius: 10px
 				display: none
 				width: 40px
 				height: 40px
-				align-items: center
-				justify-content: center
-				border: 1px solid #B5B5B5
-				border-radius: 10px
 			.search
 				position: relative
+				&--icon
+					width: 24px
+					height: 24px
 				.icon
 					width: 24px
 					height: 24px
@@ -266,6 +278,8 @@ a, input
 	font-size: 16px
 	outline: none
 	-webkit-touch-callout: none
+	&:hover
+		opacity: 1
 
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
@@ -432,6 +446,9 @@ input[type="search"]
 					width: 100%
 					color: #b5b5b5
 					gap: 7px
+					svg
+						width: 24px
+						height: 24px
 	&--navigation
 		.sort
 			width: 100%
@@ -636,6 +653,10 @@ input[type="search"]
 				padding-bottom: 20px
 				margin-bottom: 20px
 				border-bottom: 1px solid #DEDEDE
+				min-height: 510px
+				img
+					height: auto
+					object-fit: cover
 		.button.download
 			align-items: center
 			border-radius: 10px
@@ -653,7 +674,7 @@ input[type="search"]
 				&:first-child
 					font-weight: bold
 			.follow
-				background-image: url(../img/follow.svg)
+				background-image: url(../img/download.svg)
 				display: inline-block
 				height: 30px
 				margin-bottom: 0
@@ -934,14 +955,30 @@ details summary::-webkit-details-marker
 	flex: 0 0 100%
 	clear: both
 	.page
+		&_prev, &_next
+			a
+				&:hover
+					opacity: 1
+			.svg-2
+				display: none
 		&_prev
 			left: 0
 			width: 70px
+			&:hover
+				.svg-1
+					display: none
+				.svg-2
+					display: inline-block
 		&_next
 			right: 0
 			width: 70px
 			.svg-icons
 				justify-content: flex-end !important
+			&:hover
+				.svg-1
+					display: none
+				.svg-2
+					display: inline-block
 		&_next-prev
 			position: relative
 			height: 0
@@ -949,14 +986,14 @@ details summary::-webkit-details-marker
 				position: absolute
 				top: 0
 				.svg-icons
-					-webkit-filter: invert(.1)
-					filter: invert(.1)
 					display: flex
 					align-items: center
 					justify-content: flex-start
 					padding: 0
 					svg
 						padding: 0
+						width: 18px
+						height: 15px
 				*
 						display: block
 						width: 30px
@@ -1000,21 +1037,11 @@ details summary::-webkit-details-marker
 				border-color: transparent !important
 
 .svg-icons
-	width: 16px
-	height: 16px
-	-webkit-filter: invert(.7)
-	filter: invert(.7)
+	width: 20px
+	height: 20px
 	&:hover
 		svg path
 			stroke: $accent
-
-.sun-icon
-	display: block
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 250 250'%3E %3Cpath d='m132,240l-24,0l0,-36l24,0l0,36zm64.368,-26.664l-25.452,-25.452l16.968,-16.968l25.464,25.464l-16.956,16.956l-0.024,0zm-152.736,0l-16.98,-16.968l25.44,-25.464l16.98,16.968l-25.44,25.452l0,0.012zm76.368,-33.252c-33.1803,-0.013 -60.0688,-26.92 -60.06,-60.1c0.0088,-33.1803 26.9117,-60.0724 60.092,-60.068c33.18,0.0044 60.076,26.9037 60.076,60.084c-0.033,33.179 -26.929,60.064 -60.108,60.084zm0,-96.168c-19.926,0.0133 -36.0688,16.174 -36.06,36.1c0.0088,19.926 16.166,36.072 36.092,36.068c19.926,-0.004 36.076,-16.158 36.076,-36.084c-0.02,-19.93 -16.178,-36.0774 -36.108,-36.084zm120,48.084l-36,0l0,-24l36,0l0,24zm-204,-12c0,6.627 -5.3726,12 -12,12l-24,0l0,-24l24,0c6.6274,0 12,5.373 12,12l0,0zm151.872,-50.904l-16.956,-16.98l25.452,-25.464l16.98,16.98l-25.464,25.452l-0.012,0.012zm-135.756,0l-25.44,-25.452l16.98,-16.968l25.44,25.464l-16.968,16.944l-0.012,0.012zm79.884,-33.096l-24,0l0,-36l24,0l0,36z'/%3E%3C/svg%3E")
-
-.moon-icon
-	display: block
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E %3Cpath d='M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z'/%3E%3C/svg%3E")
 
 .arrow-bottom
 	display: block
@@ -1077,6 +1104,8 @@ details summary::-webkit-details-marker
 							height: 100%
 							img
 								width: 100%
+								max-height: 509px
+								height: 100%
 						&:hover
 							.h2
 								text-decoration: none
@@ -1388,7 +1417,7 @@ details summary::-webkit-details-marker
 			margin-top: 2px
 			svg
 				width: 25px
-				height: auto
+				height: 25px
 		&.show
 			transform: translate(0,0)
 			bottom: 30px
@@ -1798,24 +1827,25 @@ details summary::-webkit-details-marker
 	flex-wrap: wrap
 	#dle-captcha
 		padding: 0 !important
-	.c-captcha
+
+.c-captcha
+	position: relative
+	gap: 20px
+	flex-basis: 50%
+	max-width: 50%
+	justify-content: flex-end
+	float: right
+	display: flex
+	align-items: center
+	img
+		margin-bottom: 0 !important
 		position: relative
-		gap: 20px
-		flex-basis: 50%
-		max-width: 50%
-		justify-content: flex-end
-		float: right
-		display: flex
-		align-items: center
-		img
-			margin-bottom: 0 !important
-			position: relative
-			display: block
-			object-fit: cover
-			width: 88px
-			height: 44px
-			z-index: 1
-			transition: all ease .2s
+		display: block
+		object-fit: cover
+		width: 88px
+		height: 44px
+		z-index: 1
+		transition: all ease .2s
 
 input[name="sec_code"]
 	display: inline-block
@@ -1952,6 +1982,21 @@ input[name="sec_code"]::placeholder
 		.buttons
 			display: flex
 			gap: 10px
+			flex-wrap: wrap
+			&--inner
+				display: flex
+				gap: 10px
+				align-items: center
+				width: 100%
+				flex-wrap: wrap
+				.wrapper
+					display: flex
+					gap: 10px
+					margin-left: auto
+			.c-captcha
+				justify-content: flex-start
+				max-width: 100%
+				flex-basis: 100%
 			.bbcodes
 				font-family: "roboto"
 				padding: 11px 57px
