@@ -83,13 +83,18 @@ $(function() {
 				items: 3,
 				margin: 10,
 			},
+			350: {
+				items: 4,
+				autoWidth: false,
+			},
 			480: {
 				autoWidth: false,
 				items: 4,
 				margin: 10,
 			},
 			600: {
-				items: 7
+				items: 7,
+				autoWidth: false,
 			},
 			768: {
 				items: 4,
