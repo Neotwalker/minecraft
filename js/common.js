@@ -80,12 +80,13 @@ $(function() {
 		responsive: {
 			0: {
 				autoWidth: false,
-				items: 4,
-				margin: 15,
+				items: 3,
+				margin: 10,
 			},
 			480: {
-				autoWidth: true,
-				items: 5
+				autoWidth: false,
+				items: 4,
+				margin: 10,
 			},
 			600: {
 				items: 7
