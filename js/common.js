@@ -109,7 +109,7 @@ $(function() {
 		}
 	});
 
-	if ($(window).width() <= 1000){
+	if ($(window).width() <= 1050){
 		$('.slider--format').owlCarousel({
 			navContainer: $('.format--arrows'),
 			dots: false,
@@ -124,27 +124,33 @@ $(function() {
 			responsive: {
 				0: {
 					autoWidth: false,
-					items: 5,
-					margin: 15,
+					items: 3,
+					margin: 10,
 				},
-				390: {
-					autoWidth: true,
-					items: 5
-				},
-				600: {
-					items: 7
-				},
-				768: {
+				350: {
 					items: 4,
 					autoWidth: false,
 				},
-				820: {
+				480: {
+					autoWidth: false,
+					items: 4,
+					margin: 10,
+				},
+				600: {
+					items: 7,
+					autoWidth: false,
+				},
+				768: {
 					items: 5,
 					autoWidth: false,
 				},
-				1000: {
+				820: {
 					items: 6,
 					autoWidth: false,
+				},
+				1000: {
+					items: 10,
+					autoWidth: true,
 				}
 			}
 		})
