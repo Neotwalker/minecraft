@@ -68,9 +68,7 @@ $(function() {
 		navContainer: $('.slider--arrows'),
 		dots: false,
 		smartSpeed: 500,
-		items: 10,
 		checkVisible: true,
-		autoWidth: true,
 		margin: 10,
 		rewind: true,
 		navText: [
@@ -97,15 +95,15 @@ $(function() {
 				autoWidth: false,
 			},
 			768: {
-				items: 4,
-				autoWidth: false,
-			},
-			820: {
 				items: 5,
 				autoWidth: false,
 			},
-			1000: {
+			820: {
 				items: 6,
+				autoWidth: false,
+			},
+			1000: {
+				items: 10,
 				autoWidth: true,
 			}
 		}
